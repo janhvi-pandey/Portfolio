@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+/* styles.css */
+/* styles.css */
+.home-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.homeContent,
+.homeImg {
+  box-sizing: border-box;
+}
+
+.homeContent {
+  width: 60%;
+  margin-left: 10vh;
+  margin-top: 11vh;
+}
+
+.homeImg {
+  width: 40%;
+  text-align: right;
+  margin-right: 10vh;
+  margin-top: 11vh;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  .home-wrapper {
+    flex-direction: row; /* Stack items vertically */
+    align-items: center;
+    justify-items: center;
+  }
+}
