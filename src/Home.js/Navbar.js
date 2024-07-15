@@ -1,40 +1,25 @@
 import React, { useState } from 'react';
+import './Navbar.css'; // Import the CSS file
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeItem, setActiveItem] = useState('home'); // Initial active item
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleNavItemClick = (item) => {
+    setActiveItem(item);
+    // set colour of item  is yellow
+    document.getElementById(item).style.color = '#fff';
+  };
+
   return (
     <div>
-      <nav
-        className="navbar navbar-expand-lg bg-body-tertiary"
-        style={{
-          background: 'linear-gradient(to right, #602040, #4d004d, #1a001a)',
-          position: 'fixed',
-          width: '100%',
-          zIndex: '1000',
-          transition: 'height 0.3s ease',
-          height: isOpen ? 'auto' : '10%',
-          paddingTop: isOpen ? '0' : '1vh', // Adjusted distance from top when collapsed
-        }}
-      >
+      <nav className={`navbar navbar-expand-lg bg-body-tertiary ${isOpen ? 'navbar-open' : 'navbar-closed'}`}>
         <div className="container-fluid">
-          <a
-            className="navbar-brand"
-            href="#"
-            style={{
-              color: 'white',
-              marginLeft: '8vh',
-              marginTop: isOpen ? '2vh' : '2vh', // Adjusted distance from top based on isOpen state
-              marginBottom: isOpen ? '2vh' : '2vh',
-              fontSize: '2rem',
-              fontWeight: '500',
-              transition: 'margin 0.3s ease',
-            }}
-          >
+          <a className="navbar-brand" href="#">
             Janhvi
           </a>
           <button
@@ -44,87 +29,54 @@ export default function Navbar() {
             aria-controls="navbarSupportedContent"
             aria-expanded={isOpen}
             aria-label="Toggle navigation"
-            style={{
-              
-              color: 'white', // Color of the button text
-              fontWeight: 'bold', // Make the text bold
-              padding: '0.5rem 0.75rem', // Increase padding for better visibility
-              backgroundColor: 'transparent', // Ensure background is transparent
-              boxShadow: 'none', // Remove any box shadow
-            }}
-            
           >
-            <span
-              className="navbar-toggler-icon"
-              style={{
-                backgroundImage:
-                  "url(\"data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E\")",
-              }}
-            ></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}
-            id="navbarSupportedContent"
-            style={{
-              textAlign: 'center',
-              backgroundColor: 'inherit',
-              display: isOpen ? 'block' : 'none', // Hide navbar items when closed
-              justifyContent: 'flex-end',
-            }}
-          >
-            <ul
-              className="navbar-nav ms-auto mb-2 mb-lg-0"
-              style={{
-                color: 'white',
-                fontSize: '1.2rem',
-                fontWeight: '350',
-                marginRight: '3vh',
-                justifyContent: 'flex-end',
-                padding: '1rem 0',
-              }}
-            >
-              <li className="nav-item" style={{ margin: '0 1.5vh' }}>
+          <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={{ marginRight: '8vh' }}>
+              <li className="nav-item">
                 <a
-                  className="nav-link active"
+                  className={`nav-link ${activeItem === 'home' ? 'active' : ''}`}
                   aria-current="page"
                   href="#"
-                  style={{ color: 'white' }}
+                  onClick={() => handleNavItemClick('home')}
+                  
                 >
                   Home
                 </a>
               </li>
-              <li className="nav-item" style={{ margin: '0 1.5vh' }}>
+              <li className="nav-item">
                 <a
-                  className="nav-link"
+                  className={`nav-link ${activeItem === 'about' ? 'active' : ''}`}
                   href="#"
-                  style={{ color: 'white' }}
+                  onClick={() => handleNavItemClick('about')}
                 >
                   About
                 </a>
               </li>
-              <li className="nav-item" style={{ margin: '0 1.5vh' }}>
+              <li className="nav-item">
                 <a
-                  className="nav-link"
+                  className={`nav-link ${activeItem === 'skills' ? 'active' : ''}`}
                   href="#"
-                  style={{ color: 'white' }}
+                  onClick={() => handleNavItemClick('skills')}
                 >
                   Skills
                 </a>
               </li>
-              <li className="nav-item" style={{ margin: '0 1.5vh' }}>
+              <li className="nav-item">
                 <a
-                  className="nav-link"
+                  className={`nav-link ${activeItem === 'project' ? 'active' : ''}`}
                   href="#"
-                  style={{ color: 'white' }}
+                  onClick={() => handleNavItemClick('project')}
                 >
                   Project
                 </a>
               </li>
-              <li className="nav-item" style={{ margin: '0 1.5vh' }}>
+              <li className="nav-item">
                 <a
-                  className="nav-link"
+                  className={`nav-link ${activeItem === 'contact' ? 'active' : ''}`}
                   href="#"
-                  style={{ color: 'white' }}
+                  onClick={() => handleNavItemClick('contact')}
                 >
                   Contact
                 </a>

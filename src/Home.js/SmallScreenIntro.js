@@ -4,8 +4,7 @@ import profile_pic from "../images/profile.jpg";
 
 export default function SmallScreenIntro() {
   const containerStyle = {
-    display: 'flex',
-    flexDirection: 'column',
+    
     width: '100%',
     height: '100%',
     alignItems: 'center',
@@ -36,14 +35,14 @@ export default function SmallScreenIntro() {
 
   return (
     <div className="home-wrapper" style={containerStyle}>
-      <div className="homeImg" data-aos="fade-left" style={imgContainerStyle}>
+      <div className="homeImg"  style={imgContainerStyle}>
         <img
           src={profile_pic}
           alt="Profile"
           style={imgStyle}
         />
       </div>
-      <div className="homeContent" data-aos="fade-right" style={contentStyle}>
+      <div className="homeContent"style={contentStyle}>
         <h5>
           <b>Hii!</b>
         </h5>

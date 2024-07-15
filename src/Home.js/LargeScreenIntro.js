@@ -12,19 +12,20 @@ export default function LargeScreenIntro() {
 
   const contentStyle = {
     width: '60%',
-    marginLeft: '10vh',
+    flex:1,
+    marginTop:'11vh',
+    boxSizing:"border-box",
     justifyContent:'center',
-    marginTop: '11vh',
-    boxSizing: 'border-box',
-    textAlign: 'left',
+ 
   };
 
   const imgContainerStyle = {
+    flex:1,
     width: '40%',
     justifyContent: 'center',
-    marginRight: '10vh',
+    paddingRight:'10vh',
     marginTop: '11vh',
-    marginLeft:'10vh',
+    
     boxSizing: 'border-box',
   };
 
