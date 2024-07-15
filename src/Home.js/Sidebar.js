@@ -27,8 +27,8 @@ export default function Sidebar() {
         marginLeft: 0,
      
       }}>
-      <ul className="nav flex-column" style={{ border: '3px solid', paddingTop: '2vh', borderRadius: '5%', background: 'linear-gradient(to right, #df9fdf,#df9fdf,#df9fdf,#df9fdf,#990099)' }}>
-        <li className="nav-item" style={{ paddingBottom: '1rem' }}>
+      <ul className="nav flex-column" style={{ border: '3px solid', paddingTop: '2vh',paddingLeft:'2vh', borderRadius: '5%', background: 'linear-gradient(to right, #df9fdf,#df9fdf,#df9fdf,#df9fdf,#990099)' }}>
+        <li className="nav-item" style={{ paddingBottom: '1rem',paddingRight:'2vh' }}>
           <a href="https://github.com/janhvi-pandey" target="_blank" rel="noopener noreferrer">
             <FaGithub
               size={35}

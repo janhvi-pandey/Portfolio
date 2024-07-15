@@ -53,37 +53,36 @@ function Intro() {
       </div>
 
       {/* Small Devices */}
-      <div className="d-lg-none d-flex flex-column align-items-center" style={{ padding: '10%', marginTop: '4vh' }}>
+      <div className="d-lg-none d-flex flex-column align-items-center" style={{ padding: '10%', marginTop: '1.5vh' }}>
         <div className="mb-4">
-          <img src={profilepic} alt="Profile" style={{ borderRadius: '20%', width: '500px', height: '500px' }} />
+          <img src={profilepic} alt="Profile" style={{ borderRadius: '20%', width: '185px', height: '185px' }} />
         </div>
         <div style={{ textAlign: 'left', marginTop: '2vh' }}>
-          <h4 style={{ fontSize: '2.5rem', marginBottom: '10px', justifyContent: 'center' }}>
+          <h4 style={{ fontSize: '1rem', marginBottom: '3px', justifyContent: 'center' }}>
             <b>Hi, I'm</b>
           </h4>
-          <h1 style={{ color: '#660033', fontWeight: 'bold', fontSize: '5rem' }}>Janhvi Pandey</h1>
-          <h4 style={{ fontSize: '2.5rem', marginTop: '10px', marginBottom: '5px' }}><b>A <span className="highlightHeading" id="typingtext">
+          <h1 style={{ color: '#660033', fontWeight: 'bold', fontSize: '2.2rem' }}>Janhvi Pandey</h1>
+          <h4 style={{ fontSize: '1.3rem' }}><b>A <span className="highlightHeading" id="typingtext">
             <ReactTyped strings={['Developer', 'Designer', 'Programmer']} typeSpeed={100} loop />
           </span></b></h4>
-          <br></br>
-          <h4 style={{ color: " #660000", fontWeight: "bold", marginBottom: '2vh',fontSize:'2.6rem' }}><p>Coding your vision - one pixel at a time.</p></h4>
+          
+          <h4 style={{ color: " #660000", fontWeight: "bold",fontSize:'1.2rem' }}><p>Coding your vision -one pixel at a time.</p></h4>
 
-          <h5 style={{  color: "#000" ,fontSize:'2.3rem'}}><p className="tagline" >My passion lies in the intersection of creativity & technology, where I turn complex problems into elegant solutions</p></h5>
-          <br></br>
+          <h5 style={{  color: "#000" ,fontSize:'0.9rem'}}><p className="tagline" >My passion lies in the intersection of creativity & technology, where I turn complex problems into elegant solutions</p></h5>
+          
           <button
             className="btn"
             style={{
               color: 'white',
               background: '#4d1933',
-              borderRadius: '19px',
+              borderRadius: '13px',
               border: '1px solid black',
-              padding: '20px 60px',
-             
-              marginTop: '10px',
-              fontWeight:'2rem',
+              padding: '10px 20px',
+              fontWeight: '500',
+              marginTop:'4px',
             }}
-          > <p style={{  color: "#fff" ,fontSize:'2.5rem'}}>Download Resume </p>
-            
+          >
+            Download Resume <i className="bi bi-instagram" style={{ color: 'white' }}></i>
           </button>
         </div>
       </div>

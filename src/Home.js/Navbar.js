@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './Navbar.css'; // Import the CSS file
+import './Navbar.css'; // Keeping minimal custom styles here
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState('home'); // Initial active item
+  const [activeItem, setActiveItem] = useState('home');
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -11,80 +11,40 @@ export default function Navbar() {
 
   const handleNavItemClick = (item) => {
     setActiveItem(item);
-    // set colour of item  is yellow
-    document.getElementById(item).style.color = '#fff';
+    setIsOpen(false); // Optionally close navbar on item click
   };
 
   return (
-    <div>
-      <nav className={`navbar navbar-expand-lg bg-body-tertiary ${isOpen ? 'navbar-open' : 'navbar-closed'}`}>
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Janhvi
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            onClick={toggleNavbar}
-            aria-controls="navbarSupportedContent"
-            aria-expanded={isOpen}
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarSupportedContent">
-            <ul className="navbar-nav ms-auto mb-2 mb-lg-0" style={{ marginRight: '8vh' }}>
-              <li className="nav-item">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
+      <div className="container-fluid" style={{ minHeight: '5.5vh' }}>
+        <a className="navbar-brand" href="#home">Janhvi</a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={toggleNavbar}
+          aria-controls="navbarNav"
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon" style={{ height: '3vh' }}></span>
+        </button>
+        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`} id="navbarNav">
+          <ul className="navbar-nav me-auto">
+            {['home', 'about', 'skills', 'project', 'contact'].map((item) => (
+              <li className="nav-item" key={item}>
                 <a
-                  className={`nav-link ${activeItem === 'home' ? 'active' : ''}`}
-                  aria-current="page"
-                  href="#"
-                  onClick={() => handleNavItemClick('home')}
-                  
+                  className={`nav-link ${activeItem === item ? 'active' : ''}`}
+                  href={`#${item}`}
+                  onClick={() => handleNavItemClick(item)}
+                  aria-current={activeItem === item ? 'page' : undefined}
                 >
-                  Home
+                  {item.charAt(0).toUpperCase() + item.slice(1)}
                 </a>
               </li>
-              <li className="nav-item">
-                <a
-                  className={`nav-link ${activeItem === 'about' ? 'active' : ''}`}
-                  href="#"
-                  onClick={() => handleNavItemClick('about')}
-                >
-                  About
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className={`nav-link ${activeItem === 'skills' ? 'active' : ''}`}
-                  href="#"
-                  onClick={() => handleNavItemClick('skills')}
-                >
-                  Skills
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className={`nav-link ${activeItem === 'project' ? 'active' : ''}`}
-                  href="#"
-                  onClick={() => handleNavItemClick('project')}
-                >
-                  Project
-                </a>
-              </li>
-              <li className="nav-item">
-                <a
-                  className={`nav-link ${activeItem === 'contact' ? 'active' : ''}`}
-                  href="#"
-                  onClick={() => handleNavItemClick('contact')}
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
+            ))}
+          </ul>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
   );
 }
