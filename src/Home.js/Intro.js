@@ -80,6 +80,7 @@ function Intro() {
               padding: '10px 20px',
               fontWeight: '500',
               marginTop:'4px',
+              paddingBottom:'1.5vh',
             }}
           >
             Download Resume <i className="bi bi-instagram" style={{ color: 'white' }}></i>

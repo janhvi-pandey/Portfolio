@@ -3,15 +3,24 @@
 }
 
 .navbar-brand {
-  font-size: 3vh;
+  font-size: 3.5vh;
   font-weight: 500;
-  margin-left: 3rem; /* Margin for the brand name */
+  margin-left: 3rem; 
+  margin-right: 58.5rem;/* Margin for the brand name */
 }
 
+  .navbar-nav {
+    
+    align-items: left;
+  
+  }
+
 .nav-link {
-  font-size: 2vh;
+  font-size: 2.4vh;
   padding: 1vh;
-  margin-right: 3vh; /* Added spacing between nav items */
+  margin-right: 2.5vh;
+  justify-content: flex-end;
+  align-items:end; /* Added spacing between nav items */
 }
 
 .nav-link:hover,
@@ -33,9 +42,15 @@
 
 .navbar-toggler-icon {
 
-  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-
+@media (min-width: 769px) {
+  .navbar-collapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Align items to the end on large screens */
+  }
+}
 
 /* Adjusting the navbar collapse for small screens */
 @media (max-width: 768px) {
@@ -45,7 +60,8 @@
 
   .navbar-brand {
     font-size: auto;
-    margin-left: 4vh; /* Reduced font size for small screens */
+    margin-left: 4vh;
+    margin-right: 2vh; /* Reduced font size for small screens */
   }
 
   .navbar-collapse {
