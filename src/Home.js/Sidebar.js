@@ -16,18 +16,18 @@ export default function Sidebar() {
     <div 
       style={{
         position: 'fixed',
-        top: 0,
+        
         right: 0,
         height: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: '2vh',
+        paddingTop: '49%',
         borderRadius: '5%',
-        background: 'linear-gradient(to right, #df9fdf,#df9fdf,#df9fdf,#df9fdf,#990099)',
         marginLeft: 0,
+     
       }}>
-      <ul className="nav flex-column" style={{ border: '3px solid', paddingTop: '2vh', borderRadius: '5%', marginLeft: '0px' }}>
+      <ul className="nav flex-column" style={{ border: '3px solid', paddingTop: '2vh', borderRadius: '5%', background: 'linear-gradient(to right, #df9fdf,#df9fdf,#df9fdf,#df9fdf,#990099)' }}>
         <li className="nav-item" style={{ paddingBottom: '1rem' }}>
           <a href="https://github.com/janhvi-pandey" target="_blank" rel="noopener noreferrer">
             <FaGithub
