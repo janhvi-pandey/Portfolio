@@ -14,7 +14,7 @@ function Intro() {
   return (
     <div>
       {/* Large Devices */}
-      <div className="d-none d-lg-flex flex-row align-items-center" style={{ height: '80vh', padding: '0 4%' }}>
+      <div className="d-none d-lg-flex flex-row align-items-center" style={{ height: '80vh', }}>
         <div className="flex-grow-1" style={{ ...commonStyles }}>
           <h4 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>
             <b>Hi, I'm</b>
@@ -53,7 +53,7 @@ function Intro() {
       </div>
 
       {/* Small Devices */}
-      <div className="d-lg-none d-flex flex-column align-items-center" style={{ padding: '10%', marginTop: '1.5vh' }}>
+      <div className="d-lg-none d-flex flex-column align-items-center" style={{ padding: '0%', marginTop: '1.5vh' }}>
         <div className="mb-4">
           <img src={profilepic} alt="Profile" style={{ borderRadius: '20%', width: '185px', height: '185px' }} />
         </div>

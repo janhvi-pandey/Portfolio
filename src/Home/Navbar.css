@@ -1,0 +1,37 @@
+
+
+.navbar-dark.bg-custom {
+  background: linear-gradient(to right, #602040, #4d004d, #1a001a);
+}
+
+.navbar-brand {
+  font-size: 3vh;
+  font-weight: 500;
+  margin-left: 3rem; /* Added left margin for large screens */
+}
+
+.nav-link {
+  font-size: 2vh;
+  padding: 1vh;
+  color:rgb(209, 207, 207);
+
+  margin-right: 3vh; /* Added spacing between nav items */
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f5c504 !important; /* Yellow color on hover and when active */
+}
+
+@media (max-width: 768px) {
+ 
+  .navbar-brand {
+    font-size: 10vh;
+    margin-left: 1.5rem; /* Increased font size for small screens */
+  }
+
+  .nav-link {
+    font-size: 10vh; /* Increased font size for small screens */
+    margin-left: 1.75rem; /* Adjusted spacing between nav items for small screens */
+  }
+}

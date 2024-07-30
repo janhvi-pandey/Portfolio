@@ -1,0 +1,32 @@
+/* SmallScreenCards.css */
+
+.container {
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 4px;
+    padding-bottom: 1px;
+   
+  }
+  
+  .small-screen-card {
+    background: linear-gradient(to right,#f7b1d4,#d98cb3);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    transition: transform 0.2s; /* Transition for the zoom effect */
+  }
+  
+  .small-screen-card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+  }
+  
+  .small-screen-card-header {
+    background:linear-gradient(to right, #602040, #4d004d, #1a001a);
+    color: white;
+    text-align: center;
+    
+  }
+  
+ 

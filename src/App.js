@@ -1,8 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Home from './Home.js/Home';
+import Home from './Home/Home';
+
 
 function App() {
+  document.body.style.background = '#fff'; // lighter complementary colors
+
   return (
     <div>
       <Home/> 
