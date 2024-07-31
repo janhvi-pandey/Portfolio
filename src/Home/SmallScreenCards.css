@@ -9,12 +9,13 @@
   }
   
   .small-screen-card {
-    background: linear-gradient(to right,#f7b1d4,#d98cb3);
+    background: linear-gradient(to right,#fdeaf0,#f8eefa);
     text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    font-size: small;
     transition: transform 0.2s; /* Transition for the zoom effect */
   }
   
@@ -25,7 +26,14 @@
   .small-screen-card-header {
     background:linear-gradient(to right, #602040, #4d004d, #1a001a);
     color: white;
-    text-align: center;
+    display: flex;
+    align-items: center; 
+    justify-content:center; 
+    height:2.2rem;
+    padding:1rem; 
+    font-size: 1rem;
+    font-weight: bold;
+ 
     
   }
   

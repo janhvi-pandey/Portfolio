@@ -7,7 +7,7 @@
     text-align: center;
     margin-top: 3.5rem;
     margin-bottom: 0;
-    font-size:2.5rem;
+    font-size:2rem;
     font-weight:bold;
     color:#4d1a00;
     
@@ -22,10 +22,10 @@
 .vertical-tabs-container {
     display: flex;
     justify-content: center;
-    border: 2px solid black;
+    border: 1.6px solid black;
     margin: 3%;
     width: 94%;
-    background:linear-gradient(to right,#f2f4f4,#ebedef ,#eaecee);
+    background: linear-gradient(to right,#fdeaf0,#f8eefa);
     /* background: linear-gradient(to right,#df9fbf,#f46fb2);  */
     /* if u want the colour of about to be same as skill */
     border-radius: 16px;
@@ -43,7 +43,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     color:aliceblue;
-    border-right: 3px solid black;
+    border-right: 1.5px solid black;
    
   }
   

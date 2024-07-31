@@ -7,18 +7,13 @@ const headings = [
     id: "quick-summary",
     label: "Quick Summary",
     content: (
-      <div style={{ fontSize: "1.1rem",fontWeight:'500' }}>
+      <div style={{ fontSize: "1.2rem", fontWeight: "500" }}>
         <p>
-          Hi, I'm Janhvi Pandey, a final-year B.Tech student at BBDITM with a
-          passion for turning innovative ideas into stunning digital realities.
-          As a full-stack developer, I thrive on creating dynamic and
-          user-centric web applications. My expertise in HTML, CSS, JavaScript,
-          and React allows me to craft seamless, interactive experiences that
-          captivate users. Whether it's designing sleek interfaces or building
-          robust back-end systems, I bring a holistic approach to development.
-          Eager to push the boundaries of creativity and technology, I'm
-          dedicated to helping businesses grow and succeed online with powerful,
-          scalable solutions.
+          A visionary B.Tech student and full-stack developer, I turn innovative
+          concepts into impactful digital solutions. Proficient in HTML, CSS,
+          JavaScript, and React, I craft seamless web applications with a focus
+          on refined design and robust development. My collaborative approach
+          and problem-solving skills ensure high-quality, scalable results.
         </p>
       </div>
     ),
@@ -29,9 +24,7 @@ const headings = [
     content: (
       <div>
         <p>
-          <strong>
-            &#9733; Full Stack Developer Intern 
-          </strong>
+          <strong>&#9733; Full Stack Developer Intern</strong>
         </p>
         <p>&#8594; Softpro Lucknow</p>
         <p>&#8594; July 2024 - Present</p>
@@ -46,8 +39,6 @@ const headings = [
         </p>
         <p>&#8594; IIC BBDITM</p>
         <p>&#8594; January 2023 - Present</p>
-
-        
       </div>
     ),
   },
@@ -86,42 +77,27 @@ const headings = [
     content: (
       <div>
         <p>
-          <strong>&#9733; Passion for Innovation</strong>
+          <strong>&#9733; Innovative Solutions</strong>
         </p>
         <p>
-          &#8594; I am driven by a passion for innovation and creativity. My
-          goal is to bring unique and efficient solutions to the table, ensuring
-          that every project stands out.
-        </p>
-
-        <p>
-          <strong>&#9733; Comprehensive Skill Set</strong>
-        </p>
-        <p>
-          &#8594; With expertise in HTML, CSS, JavaScript, and React, I offer a
-          versatile skill set that covers both front-end and back-end
-          development. This ensures that I can handle any aspect of a web
-          development project.
+          &#8594; I provide creative, standout approaches tailored to each
+          project.
         </p>
 
         <p>
-          <strong>&#9733; Strong Collaboration Skills</strong>
+          <strong>&#9733; Comprehensive Expertise</strong>
         </p>
         <p>
-          &#8594; I excel in collaborative environments and am adept at working
-          with cross-functional teams. My communication skills ensure that all
-          stakeholders are aligned and projects run smoothly.
+          &#8594; Proficient in both front-end and back-end development for
+          complete web solutions.
         </p>
 
         <p>
-          <strong>&#9733; Problem-Solving Mindset & Commitment</strong>
+          <strong>&#9733; Collaborative Precision</strong>
         </p>
         <p>
-          &#8594; I thrive on solving complex problems. My analytical skills and
-          logical approach help me tackle challenges effectively and find the
-          best possible solutions. My attention to detail ensures that every
-          aspect of the project is meticulously planned and executed, resulting
-          in high-quality and polished final products.
+          &#8594; Strong teamwork and problem-solving skills ensure meticulous,
+          high-quality results.
         </p>
       </div>
     ),
@@ -132,12 +108,15 @@ export default function VerticalTabs() {
   const [activeTab, setActiveTab] = useState("quick-summary");
 
   return (
-    <section className="d-flex flex-column" style={{justifyContent: 'center'}}>
+    <section
+      className="d-flex flex-column"
+      style={{ justifyContent: "center" }}
+    >
       <div className="headingPosition">
         <h1 className="main-heading">About Me</h1>
       </div>
       <div className="vertical-tabs-container">
-        <div 
+        <div
           className={`headings ${
             activeTab === "quick-summary" ? "active-home" : ""
           }`}
@@ -167,8 +146,8 @@ export default function VerticalTabs() {
         </div>
       </div>
       <div className=" smallcontainer mt-4">
-      <SmallScreenabout />
-    </div>
+        <SmallScreenabout />
+      </div>
     </section>
   );
 }

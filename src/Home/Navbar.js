@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-custom fixed-top">
-      <div className="container-fluid" style={{minHeight: '5.5vh'}}>
+      <div className="container-fluid" >
         <a className="navbar-brand" href="#home">Janhvi</a>
         <button className="navbar-toggler" type="button" onClick={toggleNavbar} aria-controls="navbarNav" aria-expanded={isOpen} aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"  style={{height: '4vh'}}></span>

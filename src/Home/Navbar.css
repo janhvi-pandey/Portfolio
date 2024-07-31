@@ -1,4 +1,6 @@
-
+nav{
+  width: 100vw;
+}
 
 .navbar-dark.bg-custom {
   background: linear-gradient(to right, #602040, #4d004d, #1a001a);
@@ -26,12 +28,12 @@
 @media (max-width: 768px) {
  
   .navbar-brand {
-    font-size: 10vh;
+    font-size: 2.5vh;
     margin-left: 1.5rem; /* Increased font size for small screens */
   }
 
   .nav-link {
-    font-size: 10vh; /* Increased font size for small screens */
+    font-size: 2.5vh; /* Increased font size for small screens */
     margin-left: 1.75rem; /* Adjusted spacing between nav items for small screens */
   }
 }

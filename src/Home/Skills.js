@@ -1,31 +1,40 @@
 import React from "react";
+
 const cardStyles = {
-  background: 'linear-gradient(to right,#f2f4f4,#ebedef ,#eaecee)',
+  background: 'linear-gradient(to right, #ffe6f2, #f8eefa)',
   textAlign: "center",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
   height: "100%",
-  border: "1px solid black",
+  border: "1.5px solid black",
   marginRight: "1rem",
   marginLeft: "1rem",
   transition: "transform 0.2s",
 };
+
 const cardHoverStyles = {
   transform: "scale(1.05)",
-  border:"2px solid black", // Scale up the card on hover
+  border: "2px solid black", // Scale up the card on hover
 };
+
 const headerStyles = {
   background: "linear-gradient(to right, #602040, #4d004d, #1a001a)",
-  // Replace with your navbar color
   color: "white",
-  textAlign: "center",
+  display: "flex",
+  alignItems: "center", // Center items vertically
+  justifyContent: "center", // Center items horizontally
+  height: "2.2rem", // Adjust height as needed
+  padding: "1rem", // Add padding for spacing
+  fontSize: "1rem", // Adjust font size as needed
+  fontWeight: "bold", // Bold text for emphasis
 };
 
 const listItemStyles = {
   marginBottom: "10px",
   fontWeight: "600",
 };
+
 const Skills = () => {
   // Data for the cards
   const cardsData = [
@@ -39,12 +48,12 @@ const Skills = () => {
     },
     {
       title: "Designer",
-      skills: ["Canva", "UI/UX ", "Figma", "Adobe Photoshop"],
+      skills: ["Canva", "UI/UX", "Figma", "Adobe Photoshop"],
     },
   ];
 
   return (
-    <div className="container ">
+    <div className="container">
       <h2
         className="text-center"
         style={{
@@ -90,4 +99,5 @@ const Skills = () => {
     </div>
   );
 };
+
 export default Skills;

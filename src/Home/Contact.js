@@ -10,12 +10,13 @@ const Container = styled.div`
   margin: 0 auto;
   padding: 20px;
   display: flex;
+  
   flex-direction: column;
   align-items: center;
 `;
 
 const Header = styled.h2`
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: bold;
   color: #4d1a00;
   text-align: center;
@@ -35,17 +36,19 @@ const SocialCardsContainer = styled.div`
 `;
 
 const Card = styled.div`
-  background: linear-gradient(to right,#f2f4f4,#ebedef ,#eaecee);
+  background: linear-gradient(to right,#f2f3f4,#f2f4f4, #eaecee  );
+  border: 1px solid black ;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
   display: flex;
   align-items: center;
-  border: 2px solid transparent;
+  // border: 2px solid transparent;
 
   &:hover {
     transform: scale(1.05);
+    border:2px solid black;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     border-color: #602040; /* Border color on hover */
   }

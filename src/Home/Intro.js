@@ -9,6 +9,7 @@ function Intro() {
     color: '#333',
     fontFamily: 'Arial, sans-serif',
     marginBottom: '6vh',
+    marginLeft:'8vh',
   };
 
   return (
@@ -57,7 +58,7 @@ function Intro() {
         <div className="mb-4">
           <img src={profilepic} alt="Profile" style={{ borderRadius: '20%', width: '185px', height: '185px' }} />
         </div>
-        <div style={{ textAlign: 'left', marginTop: '2vh' }}>
+        <div style={{ textAlign: 'left', marginTop: '2vh' ,marginLeft:'2.5vh'}}>
           <h4 style={{ fontSize: '1rem', marginBottom: '3px', justifyContent: 'center' }}>
             <b>Hi, I'm</b>
           </h4>

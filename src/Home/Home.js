@@ -1,33 +1,27 @@
-import React from 'react';
-import Navbar from './Navbar';
-import Intro from './Intro';
-import About from './About';
-import Skills from './Skills';
-import Project from './project';
-import CertificationSlider from "./CertificationSlider";
-import Contact from './Contact';
+import React from "react";
+import Intro from "./Intro";
+import About from "./About";
+import Skills from "./Skills";
+import Project from "./project";
+import Certification from "./Certification";
+import Contact from "./Contact";
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <div
-        className="home-content container"
+        className="home-content"
         style={{
-          minHeight: '100vh', // Ensure it covers the full viewport height
-          paddingTop: '70px'
-            // Add padding to offset the fixed navbar
+          paddingTop: "70px",
+          // Add padding to offset the fixed navbar
         }}
       >
-       <Intro/>
-       
-       <About/>
-       <Skills/>
-       <Project/>
-       <CertificationSlider/>
-       <Contact/>
-      
-       
+        <Intro />
+        <About />
+        <Skills />
+        <Project />
+        <Certification />
+        <Contact />
       </div>
     </div>
   );
