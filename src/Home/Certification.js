@@ -34,7 +34,7 @@ const certifications = [
   {
     title: "Certificate of Achievement By Infosys",
     image: certificationImage4,
-    description: "Course: Programming Using C++",
+    description: "Course: Fundamentals Of Information Security",
     certificationLink: "https://example.com/certification-four", // Update with actual certification URL
   },
   // Add more certifications as needed
@@ -71,7 +71,7 @@ const CertificationCard = ({ certification }) => {
       />
 
       {/* Certification Details */}
-      <h3 className="certification-title">{certification.title}</h3>
+      <h3 className="certification-title" >{certification.title}</h3>
       <p className="certification-description">{certification.description}</p>
     </div>
     

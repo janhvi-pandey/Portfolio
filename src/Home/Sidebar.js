@@ -19,7 +19,7 @@ const socialLinks = [
   },
   {
     icon: <FaLinkedin />,
-    url: "https://www.linkedin.com/in/janhvi-pandey",
+    url: "https://www.linkedin.com/in/janhvipandey/",
     color: "#ADD8E6", // Light blue for LinkedIn
     hoverColor: "#0A66C2", // LinkedIn blue
   },

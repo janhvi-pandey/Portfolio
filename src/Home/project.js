@@ -35,7 +35,7 @@ const projects = [
     image: projectImage3,
     description: "Transform and refine your text effortlessly.",
     technologies: ["React", "Node.js","HTML", "CSS", "JavaScript"],
-    githubLink: "https://github.com/janhvi-pandey/Portfolio", // Update with actual GitHub URL
+    githubLink: "https://github.com/janhvi-pandey/TextUtils", // Update with actual GitHub URL
   },
   {
     title: "TicTac Zenith",
@@ -49,14 +49,14 @@ const projects = [
     image: projectImage5,
     description: "Discover a world of musical treasures.",
     technologies:  ["HTML", "CSS", "JavaScript"],
-    githubLink: "https://github.com/janhvi-pandey/YourMeal", // Update with actual GitHub URL
+    githubLink: "https://github.com/janhvi-pandey/Spotify", // Update with actual GitHub URL
   },
   {
     title: "Hiss Of Doom",
     image: projectImage6,
     description: "Engaging Snake game: eat, grow, and conquer.",
     technologies: ["HTML", "CSS", "JavaScript"],
-    githubLink: "https://github.com/janhvi-pandey/YourMeal", // Update with actual GitHub URL
+    githubLink: "https://github.com/janhvi-pandey/Hiss-of-Doom", // Update with actual GitHub URL
   },
   // Add more projects as needed
 ];

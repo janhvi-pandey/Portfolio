@@ -96,9 +96,12 @@
       height: 210px; /* Adjusted height for images on small screens */
     }
   
-    .certification-title,
+    .certification-title{
+      font-size: 0.8rem;
+      padding:2px;
+    }
     .certification-description {
-      font-size: 0.9rem;
+      font-size: 0.7rem;
       padding:2px; /* Slightly smaller text size for small screens */
     }
   }

@@ -104,7 +104,7 @@ const socialLinks = [
   {
     platform: 'Linkedin',
     icon: <FaLinkedin />,
-    link: "https://www.linkedin.com/in/janhvi-pandey",
+    link: "https://www.linkedin.com/in/janhvipandey/",
     username: "@janhvipandey"
   },
   {
