@@ -27,7 +27,7 @@ const headerStyles = {
   height: "2.2rem", // Adjust height as needed
   padding: "1rem", // Add padding for spacing
   fontSize: "1rem", // Adjust font size as needed
-  fontWeight: "bold", // Bold text for emphasis
+  fontWeight: "600", // Bold text for emphasis
 };
 
 const listItemStyles = {
@@ -53,15 +53,17 @@ const Skills = () => {
   ];
 
   return (
-    <div className="container">
+    <section id="skills">
+    <div className="container" >
       <h2
-        className="text-center"
+        className="text-center"    
         style={{
-          fontSize: "2.6rem",
+          fontSize: "2.3rem",
           marginTop: "2rem",
           marginBottom: "3rem",
           fontWeight: "bold",
           color: "#4d1a00",
+      
         }}
       >
         Skills
@@ -97,6 +99,7 @@ const Skills = () => {
         ))}
       </div>
     </div>
+    </section>
   );
 };
 

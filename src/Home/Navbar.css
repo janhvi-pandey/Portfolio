@@ -16,12 +16,14 @@ nav{
   font-size: 2vh;
   padding: 1vh;
   color:rgb(209, 207, 207);
-
+  transition: transform 0.3s ease, color 0.3s ease;
   margin-right: 3vh; /* Added spacing between nav items */
 }
 
 .nav-link:hover,
 .nav-link.active {
+  transform: scale(1.05);
+  
   color: #f5c504 !important; /* Yellow color on hover and when active */
 }
 

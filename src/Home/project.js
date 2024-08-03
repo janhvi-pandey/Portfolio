@@ -7,48 +7,56 @@ import "./project.css"; // Import the CSS file
 import { FaGithub } from "react-icons/fa";
 
 // Sample images (replace with actual imports)
-import projectImage1 from "../images/YourMeal.png";
-import projectImage2 from "../images/Registration_form.png";
-import projectImage3 from "../images/counter.png";
-import projectImage4 from "../images/Textutils.png";
-import projectImage5 from "../images/snake.png";
+import projectImage1 from "../images/Portfolio.png";
+import projectImage2 from "../images/YourMeal.png";
+import projectImage3 from "../images/Textutils.png";
+import projectImage4 from "../images/TicTacToe.png";
+import projectImage5 from "../images/Spotify.png";
+import projectImage6 from "../images/snake.png";
 
 // Array of projects
 const projects = [
   {
-    title: "Project One",
+    title: "My Personal Portfolio",
     image: projectImage1,
-    description: "This is a description of Project One.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    githubLink: "https://github.com/yourprofile/project-one", // Update with actual GitHub URL
+    description: "Curated showcase of my best work",
+    technologies: ["HTML", "CSS", "JavaScript","React","Node.js"],
+    githubLink: "https://github.com/janhvi-pandey/Portfolio", // Update with actual GitHub URL
   },
   {
-    title: "Project Two",
+    title: "Your Meal",
     image: projectImage2,
-    description: "This is a description of Project Two.",
-    technologies: ["React", "Node.js", "Express"],
-    githubLink: "https://github.com/yourprofile/project-two", // Update with actual GitHub URL
+    description: "Explore a world of culinary delights.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/janhvi-pandey/YourMeal", // Update with actual GitHub URL
   },
   {
-    title: "Project Three",
+    title: "TextUtils",
     image: projectImage3,
-    description: "This is a description of Project Three.",
-    technologies: ["Python", "Django", "SQLite"],
-    githubLink: "https://github.com/yourprofile/project-three", // Update with actual GitHub URL
+    description: "Transform and refine your text effortlessly.",
+    technologies: ["React", "Node.js","HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/janhvi-pandey/Portfolio", // Update with actual GitHub URL
   },
   {
-    title: "Project Four",
+    title: "TicTac Zenith",
     image: projectImage4,
-    description: "This is a description of Project Four.",
-    technologies: ["Ruby", "Rails", "PostgreSQL"],
-    githubLink: "https://github.com/yourprofile/project-four", // Update with actual GitHub URL
+    description: "Challenge yourself in a classic game of strategy.",
+    technologies:  ["HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/janhvi-pandey/TIC-TAC-TOE", // Update with actual GitHub URL
   },
   {
-    title: "Project Five",
+    title: "Spotify",
     image: projectImage5,
-    description: "This is a description of Project Five.",
-    technologies: ["JavaScript", "React", "CSS"],
-    githubLink: "https://github.com/yourprofile/project-five", // Update with actual GitHub URL
+    description: "Discover a world of musical treasures.",
+    technologies:  ["HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/janhvi-pandey/YourMeal", // Update with actual GitHub URL
+  },
+  {
+    title: "Hiss Of Doom",
+    image: projectImage6,
+    description: "Engaging Snake game: eat, grow, and conquer.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    githubLink: "https://github.com/janhvi-pandey/YourMeal", // Update with actual GitHub URL
   },
   // Add more projects as needed
 ];
@@ -56,7 +64,8 @@ const projects = [
 // ProjectCard component
 const ProjectCard = ({ project }) => {
   return (
-    <div className="certification-card">
+   
+    <div className="certification-card" >
       {/* Header with window controls and Project link */}
       <div className="card-header">
         <div className="window-controls">
@@ -94,6 +103,7 @@ const ProjectCard = ({ project }) => {
       </ul>
       
     </div>
+    
   );
 };
 
@@ -126,8 +136,8 @@ const ProjectSlider = () => {
   };
 
   return (
-    <>
-      <h2 className="slider-title">Projects</h2>
+     <>
+      <h2 className="slider-title" id="projects">Projects</h2>
 
       <div className="slider-container">
         <Slider {...settings}>

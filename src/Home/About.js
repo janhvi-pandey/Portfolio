@@ -109,7 +109,7 @@ export default function VerticalTabs() {
 
   return (
     <section
-      className="d-flex flex-column"
+      className="d-flex flex-column" id="about"
       style={{ justifyContent: "center" }}
     >
       <div className="headingPosition">

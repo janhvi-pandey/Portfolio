@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
       <div
-        className="home-content"
+        className="home-content" id="home"
         style={{
           paddingTop: "70px",
           // Add padding to offset the fixed navbar

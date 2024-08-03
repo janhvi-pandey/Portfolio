@@ -1,40 +1,33 @@
 /* SmallScreenCards.css */
 
 .container {
-    padding-left: 13px;
-    padding-right: 13px;
-    padding-top: 4px;
-    padding-bottom: 1px;
-   
-  }
-  
-  .small-screen-card {
-    background: linear-gradient(to right,#fdeaf0,#f8eefa);
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
-    font-size: small;
-    transition: transform 0.2s; /* Transition for the zoom effect */
-  }
-  
-  .small-screen-card:hover {
-    transform: scale(1.05); /* Scale up the card on hover */
-  }
-  
-  .small-screen-card-header {
-    background:linear-gradient(to right, #602040, #4d004d, #1a001a);
-    color: white;
-    display: flex;
-    align-items: center; 
-    justify-content:center; 
-    height:2.2rem;
-    padding:1rem; 
-    font-size: 1rem;
-    font-weight: bold;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 4px;
+  padding-bottom: 1px;
+}
+
+.small-screen-card {
+  background: linear-gradient(to right, #fdeaf0, #f8eefa);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  font-size: small;
+  transition: transform 0.2s; /* Transition for the zoom effect */
+}
+
+.small-screen-card:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+}
+
+.small-screen-card-header {
+  background: linear-gradient(to right, #602040, #4d004d, #1a001a);
+  color: rgb(254, 250, 250);
+ font-weight: 600;
+ font-size: 1rem;
+
  
-    
-  }
-  
- 
+/* Ensure text is centered */
+}

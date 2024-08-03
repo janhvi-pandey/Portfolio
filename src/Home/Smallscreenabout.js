@@ -113,17 +113,16 @@ const SmallScreenCards = () => {
           <div
             key={heading.id}
             className="col-12 "
-            style={{ marginBottom: "10vh" }}
+            style={{ marginBottom: "5vh" }}
           >
             <div
               className="card h-100 shadow-sm small-screen-card"
               style={{ border: "2px solid black" }}
             >
-              <div
-                className="card-header small-screen-card-header"
-                style={{ fontWeight: "500" }}
-              >
-                {heading.label}
+              <div className="text-center" style={{width: '100%'}}>
+                <div className="card-header text-center small-screen-card-header">
+                  {heading.label}
+                </div>
               </div>
               <div className="card-body" style={{ fontWeight: "400" }}>
                 {heading.content}

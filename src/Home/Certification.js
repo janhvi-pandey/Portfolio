@@ -14,27 +14,27 @@ import certificationImage4 from "../images/Certificate-4.png";
 // Array of certifications
 const certifications = [
   {
-    title: "Certification One",
+    title: "Certificate of Training By Internshala",
     image: certificationImage1,
-    description: "This is a description of Certification One.",
+    description: "Course: Web Development",
     certificationLink: "https://example.com/certification-one", // Update with actual certification URL
   },
   {
-    title: "Certification Two",
+    title: "Certificate By Google Developer Student Clubs",
     image: certificationImage2,
-    description: "This is a description of Certification Two.",
+    description: "Google Cloud Career Pathway Campaign",
     certificationLink: "https://example.com/certification-two", // Update with actual certification URL
   },
   {
-    title: "Certification Three",
+    title: "Certificate of Achievement By Infosys",
     image: certificationImage3,
-    description: "This is a description of Certification Three.",
+    description: "Course: Programming Using C++",
     certificationLink: "https://example.com/certification-three", // Update with actual certification URL
   },
   {
-    title: "Certification Four",
+    title: "Certificate of Achievement By Infosys",
     image: certificationImage4,
-    description: "This is a description of Certification Four.",
+    description: "Course: Programming Using C++",
     certificationLink: "https://example.com/certification-four", // Update with actual certification URL
   },
   // Add more certifications as needed
@@ -43,6 +43,7 @@ const certifications = [
 // CertificationCard component
 const CertificationCard = ({ certification }) => {
   return (
+    
     <div className="certification-card">
       {/* Header with window controls and Certification link */}
       <div className="card-header">
@@ -73,6 +74,7 @@ const CertificationCard = ({ certification }) => {
       <h3 className="certification-title">{certification.title}</h3>
       <p className="certification-description">{certification.description}</p>
     </div>
+    
   );
 };
 
@@ -106,7 +108,7 @@ const CertificationSlider = () => {
 
   return (
     <>
-      <h2 className="slider-title">Certifications</h2>
+      <h2 className="slider-title" id="certifications">Certifications</h2>
 
       <div className="slider-container">
         <Slider {...settings}>

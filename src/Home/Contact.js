@@ -141,7 +141,7 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <div>
+    <div id="contact">
       <Header>Contact Me</Header>
 
       <Container>
