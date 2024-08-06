@@ -60,7 +60,7 @@ export default function Footer() {
       backgroundImage: "linear-gradient(to right, #ff6b6b, #ff8787)", // Gradient color for text
       WebkitBackgroundClip: "text", // Makes the gradient text visible
       WebkitTextFillColor: "transparent", // Makes text transparent to show gradient
-      "@media (max-width: 768px)": {
+      "@media (maxWidth: 768px)": {
         fontSize: "1.5rem",
       },
     },
@@ -69,7 +69,7 @@ export default function Footer() {
       fontSize: "1.3rem",
       marginBottom:'0px',
       margin: "0.5rem 0 0",
-      "@media (max-width: 768px)": {
+      "@media (maxWidth: 768px)": {
         fontSize: "1.1rem",
       },
     },

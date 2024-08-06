@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState }  from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -34,7 +34,7 @@ const projects = [
     title: "TextUtils",
     image: projectImage3,
     description: "Transform and refine your text effortlessly.",
-    technologies: ["React", "Node.js","HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript","React", "Node.js"],
     githubLink: "https://github.com/janhvi-pandey/TextUtils", // Update with actual GitHub URL
   },
   {
@@ -60,12 +60,35 @@ const projects = [
   },
   // Add more projects as needed
 ];
-
-// ProjectCard component
 const ProjectCard = ({ project }) => {
-  return (
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    // Function to check screen width
+    const checkScreenWidth = () => {
+      setIsLargeScreen(window.innerWidth >= 992); // Set threshold for large screens
+    };
+
+    // Check screen width on initial render
+    checkScreenWidth();
+
+    // Add event listener to update state on resize
+    window.addEventListener("resize", checkScreenWidth);
+
+    // Clean up the event listener on unmount
+    return () => window.removeEventListener("resize", checkScreenWidth);
+  }, []);
+
+  // Helper function to render truncated or full text
+  const renderDescription = (text) => {
+    const maxLength = 35;
+    return !isLargeScreen && text.length > maxLength
+      ? `${text.slice(0, maxLength)}...`
+      : text;
+  };
+ return (
    
-    <div className="certification-card" >
+    <div className="project-card" >
       {/* Header with window controls and Project link */}
       <div className="card-header">
         <div className="window-controls">
@@ -73,7 +96,7 @@ const ProjectCard = ({ project }) => {
           <span className="dot yellow"></span>
           <span className="dot green"></span>
         </div>
-        <div className="certification-link">
+        <div className="project-link">
           <a
             href={project.projectLink}
             target="_blank"
@@ -88,15 +111,15 @@ const ProjectCard = ({ project }) => {
       <img
         src={project.image}
         alt={`${project.title} preview`}
-        className="certification-image"
+        className="project-image"
       />
 
       {/* Project Details */}
-      <h3 className="certification-title">{project.title}</h3>
-      <p className="certification-description">{project.description}</p>
+      <h3 className="project-title">{project.title}</h3>
+      <p className="project-description">  {renderDescription(project.description)}</p>
       <ul style={{ listStyleType: "none", paddingLeft: "10px", display: 'flex', flexWrap: 'wrap', margin: 0 }}>
         {project.technologies.map((tech, index) => (
-          <li key={index} style={{ fontSize: "0.9rem", marginBottom: "5px", border: '1.5px solid black', borderRadius: '5px', padding: '3px', marginRight: '10px', background: 'rgb(240, 240, 240)' }}>
+          <li key={index} style={{ fontSize: "0.7rem", border: '1px solid grey', borderRadius: '5px', padding: '3px', marginRight: '0.5rem', marginBottom:'0.5rem', background: 'rgb(240, 240, 240)' }}>
             {tech}
           </li>
         ))}

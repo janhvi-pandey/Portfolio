@@ -9,7 +9,7 @@ function Intro() {
     color: '#333',
     fontFamily: 'Arial, sans-serif',
     marginBottom: '6vh',
-    marginLeft:'8vh',
+    marginLeft:'4vh',
   };
 
   return (

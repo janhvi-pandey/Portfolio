@@ -2,7 +2,8 @@ import React from "react";
 import Intro from "./Intro";
 import About from "./About";
 import Skills from "./Skills";
-import Project from "./project";
+
+import Projects from "./Projects";
 import Certification from "./Certification";
 import Contact from "./Contact";
 
@@ -19,7 +20,8 @@ export default function Home() {
         <Intro />
         <About />
         <Skills />
-        <Project />
+       
+        <Projects/>
         <Certification />
         <Contact />
       </div>

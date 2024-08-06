@@ -6,11 +6,10 @@ import { FaXTwitter } from 'react-icons/fa6';  // Importing the latest X (Twitte
 
 // Styled components for the card layout
 const Container = styled.div`
-  width: 100%; /* Adjust the max width as needed */
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
   display: flex;
-  
   flex-direction: column;
   align-items: center;
 `;
@@ -27,28 +26,28 @@ const Header = styled.h2`
 const SocialCardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* Two columns */
-  gap: 20px; /* Space between cards */
-  width: 100%;
-  @media (max-width: 600px) {
-  grid-template-columns: 1fr; /* Stacks all cards in one column on small screens */
-}
+  gap: 30px; /* Space between cards */
+  width: 96%;
 
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* Stack cards in one column */
+  }
 `;
 
 const Card = styled.div`
-  background: linear-gradient(to right,#f2f3f4,#f2f4f4, #eaecee  );
-  border: 1px solid black ;
+  background: linear-gradient(to right, #f2f3f4, #f2f4f4, #eaecee);
+  border: 1px solid black;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
   display: flex;
   align-items: center;
-  // border: 2px solid transparent;
+  text-decoration: none;
 
   &:hover {
-    transform: scale(1.05);
-    border:2px solid black;
+    transform: scale(1.03);
+    border: 2px solid black;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     border-color: #602040; /* Border color on hover */
   }
@@ -68,7 +67,7 @@ const IconWrapper = styled.div`
       case 'Github':
         return '#333'; // Standard GitHub grey
       case 'X':
-        return '#111'; // Standard X blue (Twitter blue)
+        return '#1DA1F2'; // Standard X blue (Twitter blue)
       case 'Instagram':
         return '#e4405f'; // Standard Instagram pink
       case 'WhatsApp':
@@ -104,38 +103,38 @@ const socialLinks = [
   {
     platform: 'Linkedin',
     icon: <FaLinkedin />,
-    link: "https://www.linkedin.com/in/janhvipandey/",
-    username: "@janhvipandey"
+    link: 'https://www.linkedin.com/in/janhvipandey/',
+    username: '@janhvipandey',
   },
   {
     platform: 'Github',
     icon: <FaGithub />,
-    link: "https://github.com/janhvi-pandey",
-    username: "@janhvi-pandey"
+    link: 'https://github.com/janhvi-pandey',
+    username: '@janhvi-pandey',
   },
   {
     platform: 'X',
-    icon: <FaXTwitter />,  // Using the latest X icon
-    link: "https://x.com/Shiviika23",
-    username: "@Shiviika23"
+    icon: <FaXTwitter />, // Using the latest X icon
+    link: 'https://x.com/Shiviika23',
+    username: '@Shiviika23',
   },
   {
     platform: 'Instagram',
     icon: <FaInstagram />,
-    link: "https://www.instagram.com/its_shiviika",
-    username: "@its_shiviika"
+    link: 'https://www.instagram.com/its_shiviika',
+    username: '@its_shiviika',
   },
   {
     platform: 'WhatsApp',
     icon: <FaWhatsapp />,
-    link: "https://wa.me/916307976482",
-    username: "+91 6307976482"
+    link: 'https://wa.me/916307976482',
+    username: '+91 6307976482',
   },
   {
     platform: 'Email',
     icon: <FaEnvelope />,
-    link: "mailto:shivipandey993@gmail.com",
-    username: "shivipandey993@gmail.com"
+    link: 'mailto:shivipandey993@gmail.com',
+    username: 'shivipandey993@gmail.com',
   },
 ];
 

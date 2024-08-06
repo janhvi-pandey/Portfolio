@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { LiaCertificateSolid } from "react-icons/lia";
-import "./certification.css"; // Import the CSS file
+import "./certification.css";
 
 // Sample images (replace with actual imports)
 import certificationImage1 from "../images/Certificate-1.png";
@@ -42,8 +42,34 @@ const certifications = [
 
 // CertificationCard component
 const CertificationCard = ({ certification }) => {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    // Function to check screen width
+    const checkScreenWidth = () => {
+      setIsSmallScreen(window.innerWidth < 992);
+    };
+
+    // Check screen width on initial render
+    checkScreenWidth();
+
+    // Add event listener to update state on resize
+    window.addEventListener("resize", checkScreenWidth);
+
+    // Clean up the event listener on unmount
+    return () => window.removeEventListener("resize", checkScreenWidth);
+  }, []);
+
+  // Render full or sliced text based on screen size
+  const renderTitle = (title) => {
+    return isSmallScreen ? `${title.slice(0, 30)}...` : title;
+  };
+
+  const renderDescription = (description) => {
+    return isSmallScreen ? `${description.slice(0, 35)}...` : description;
+  };
+
   return (
-    
     <div className="certification-card">
       {/* Header with window controls and Certification link */}
       <div className="card-header">
@@ -58,7 +84,9 @@ const CertificationCard = ({ certification }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-          <b><LiaCertificateSolid size={25}  /></b>  
+            <b>
+              <LiaCertificateSolid size={25} />
+            </b>
           </a>
         </div>
       </div>
@@ -71,10 +99,11 @@ const CertificationCard = ({ certification }) => {
       />
 
       {/* Certification Details */}
-      <h3 className="certification-title" >{certification.title}</h3>
-      <p className="certification-description">{certification.description}</p>
+      <h3 className="certification-title">{renderTitle(certification.title)}</h3>
+      <p className="certification-description">
+        {renderDescription(certification.description)}
+      </p>
     </div>
-    
   );
 };
 
@@ -108,7 +137,9 @@ const CertificationSlider = () => {
 
   return (
     <>
-      <h2 className="slider-title" id="certifications">Certifications</h2>
+      <h2 className="slider-title" id="certifications">
+        Certifications
+      </h2>
 
       <div className="slider-container">
         <Slider {...settings}>

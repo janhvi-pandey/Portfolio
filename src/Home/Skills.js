@@ -7,15 +7,17 @@ const cardStyles = {
   flexDirection: "column",
   justifyContent: "center",
   height: "100%",
-  border: "1.5px solid black",
+  border: "1.5px solid grey",
+ 
   marginRight: "1rem",
   marginLeft: "1rem",
   transition: "transform 0.2s",
 };
 
 const cardHoverStyles = {
+  
   transform: "scale(1.05)",
-  border: "2px solid black", // Scale up the card on hover
+ 
 };
 
 const headerStyles = {
@@ -48,7 +50,7 @@ const Skills = () => {
     },
     {
       title: "Designer",
-      skills: ["Canva", "UI/UX", "Figma", "Adobe Photoshop"],
+      skills: ["Canva", "UI/UX", "Figma"],
     },
   ];
 
