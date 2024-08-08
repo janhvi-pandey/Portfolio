@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactTyped } from 'react-typed';
-import profilepic from '../images/profile.jpg';
+import profilepic from '../images/jpp.jpg';
 import Sidebar from "./Sidebar";
 
 function Intro() {
@@ -56,7 +56,7 @@ function Intro() {
         </div>
        
         <div className="flex-grow-1 d-flex justify-content-center">
-          <img src={profilepic} alt="Profile" style={{ borderRadius: '20%', width: '250px', height: '250px', marginBottom: '4vh' }} />
+          <img src={profilepic} alt="Profile" style={{ borderRadius: '50%', width: 'auto', height: '250px', marginBottom: '4vh' }} />
         </div>
         <div className="d-flex align-items-end justify-content-end" style={{ flex: '0 0 auto', marginLeft: 'auto', padding: '0 20px' }}>
           <Sidebar />
@@ -66,7 +66,7 @@ function Intro() {
       {/* Small Devices */}
       <div className="d-lg-none d-flex flex-column align-items-center" id="intro" style={{ padding: '0%', marginTop: '1.5vh' }}>
         <div className="mb-4">
-          <img src={profilepic} alt="Profile" style={{ borderRadius: '20%', width: '185px', height: '185px' }} />
+          <img src={profilepic} alt="Profile" style={{ borderRadius: '50%', width: 'auto', height: '200px' }} />
         </div>
         <div style={{ textAlign: 'left', marginTop: '2vh', marginLeft:'2.5vh'}}>
           <h4 style={{ fontSize: '1rem', marginBottom: '3px', justifyContent: 'center' }}>
