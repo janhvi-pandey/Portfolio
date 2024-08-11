@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-// Import Font Awesome icons
-import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';  // Importing the latest X (Twitter) icon from Font Awesome 6
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import leetcodeIcon from '../images/leet.png'; // Import the LeetCode icon
+
+import { FaXTwitter } from 'react-icons/fa6'; // Importing the latest X (Twitter) icon from Font Awesome 6
 
 // Styled components for the card layout
 const Container = styled.div`
@@ -58,6 +59,7 @@ const IconWrapper = styled.div`
   margin-right: 20px;
   margin-left: 10px;
   transition: color 0.3s ease-in-out;
+  display: flex; /* Ensure image and icon are centered */
 
   // Default colors for each social icon
   color: ${({ platform }) => {
@@ -70,14 +72,18 @@ const IconWrapper = styled.div`
         return '#1DA1F2'; // Standard X blue (Twitter blue)
       case 'Instagram':
         return '#e4405f'; // Standard Instagram pink
-      case 'WhatsApp':
-        return '#25d366'; // Standard WhatsApp green
       case 'Email':
         return '#D14836'; // Standard Gmail red
       default:
         return '#4d1a00'; // Default fallback color
     }
   }};
+
+  img {
+    width: 25.5px; /* Set the image size */
+    height: 26px;
+    border-radius:3px;
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -125,10 +131,10 @@ const socialLinks = [
     username: '@its_shiviika',
   },
   {
-    platform: 'WhatsApp',
-    icon: <FaWhatsapp />,
-    link: 'https://wa.me/916307976482',
-    username: '+91 6307976482',
+    platform: 'LeetCode',
+    icon: <img src={leetcodeIcon} alt="LeetCode" />, // Using an img element for LeetCode icon
+    link: 'https://leetcode.com/u/janhvipandey/',
+    username: '@janhvipandey',
   },
   {
     platform: 'Email',

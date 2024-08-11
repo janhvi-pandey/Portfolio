@@ -3,10 +3,10 @@ import {
   FaGithub,
   FaLinkedin,
   FaInstagram,
-  FaWhatsapp,
   FaTwitter,
   FaEnvelope,
 } from "react-icons/fa";
+import leetcodeIcon from '../images/l.png'; 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Define the theme colors for the social media icons
@@ -30,10 +30,16 @@ const socialLinks = [
     hoverColor: "#E1306C", // Instagram magenta
   },
   {
-    icon: <FaWhatsapp />,
-    url: "https://wa.me/916307976482",
-    color: "#90EE90", // Light green for WhatsApp
-    hoverColor: "#25D366", // WhatsApp green
+    icon: (
+      <img
+        src={leetcodeIcon}
+        alt="LeetCode"
+        style={{ width: "1.8rem", height: "1.8rem" }} 
+      />
+    ),
+    url: "https://leetcode.com/u/janhvipandey/",
+    color: "#FFA500", // Default color for LeetCode
+    hoverColor: "#FFA500", // Hover color for LeetCode
   },
   {
     icon: <FaTwitter />,
