@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
-import leetcodeIcon from '../images/leet.png'; // Import the LeetCode icon
+import leetcodeIcon from '../images/leetCode.png'; 
 
-import { FaXTwitter } from 'react-icons/fa6'; // Importing the latest X (Twitter) icon from Font Awesome 6
+import { FaXTwitter } from 'react-icons/fa6'; 
 
 // Styled components for the card layout
 const Container = styled.div`
@@ -65,23 +65,24 @@ const IconWrapper = styled.div`
   color: ${({ platform }) => {
     switch (platform) {
       case 'Linkedin':
-        return '#0077b5'; // Standard LinkedIn blue
+        return '#0077b5'; 
       case 'Github':
-        return '#333'; // Standard GitHub grey
+        return '#333'; 
       case 'X':
-        return '#1DA1F2'; // Standard X blue (Twitter blue)
+        return '#1DA1F2'; 
       case 'Instagram':
-        return '#e4405f'; // Standard Instagram pink
+        return '#e4405f'; 
       case 'Email':
-        return '#D14836'; // Standard Gmail red
+        return '#D14836';
       default:
-        return '#4d1a00'; // Default fallback color
+        return '#4d1a00'; 
     }
   }};
 
   img {
-    width: 25.5px; /* Set the image size */
-    height: 26px;
+    width: 26px; /* Set the image size */
+    height: 25.3px;
+    margin-top:3px;
     border-radius:3px;
   }
 `;
@@ -120,7 +121,7 @@ const socialLinks = [
   },
   {
     platform: 'X',
-    icon: <FaXTwitter />, // Using the latest X icon
+    icon: <FaXTwitter />,
     link: 'https://x.com/Shiviika23',
     username: '@Shiviika23',
   },
@@ -132,7 +133,7 @@ const socialLinks = [
   },
   {
     platform: 'LeetCode',
-    icon: <img src={leetcodeIcon} alt="LeetCode" />, // Using an img element for LeetCode icon
+    icon: <img src={leetcodeIcon} alt="LeetCode" />, 
     link: 'https://leetcode.com/u/janhvipandey/',
     username: '@janhvipandey',
   },

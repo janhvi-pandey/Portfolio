@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
@@ -20,7 +20,7 @@ const projects = [
     title: "My Personal Portfolio",
     image: projectImage1,
     description: "Curated showcase of my best work",
-    technologies: ["HTML", "CSS", "JavaScript","React","Node.js"],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
     githubLink: "https://github.com/janhvi-pandey/Portfolio", // Update with actual GitHub URL
   },
   {
@@ -34,21 +34,21 @@ const projects = [
     title: "TextUtils",
     image: projectImage3,
     description: "Transform and refine your text effortlessly.",
-    technologies: ["HTML", "CSS", "JavaScript","React", "Node.js"],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
     githubLink: "https://github.com/janhvi-pandey/TextUtils", // Update with actual GitHub URL
   },
   {
     title: "TicTac Zenith",
     image: projectImage4,
     description: "Challenge yourself in a classic game of strategy.",
-    technologies:  ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript"],
     githubLink: "https://github.com/janhvi-pandey/TIC-TAC-TOE", // Update with actual GitHub URL
   },
   {
     title: "Spotify",
     image: projectImage5,
     description: "Discover a world of musical treasures.",
-    technologies:  ["HTML", "CSS", "JavaScript"],
+    technologies: ["HTML", "CSS", "JavaScript"],
     githubLink: "https://github.com/janhvi-pandey/Spotify", // Update with actual GitHub URL
   },
   {
@@ -86,9 +86,8 @@ const ProjectCard = ({ project }) => {
       ? `${text.slice(0, maxLength)}...`
       : text;
   };
- return (
-   
-    <div className="project-card" >
+  return (
+    <div className="project-card">
       {/* Header with window controls and Project link */}
       <div className="card-header">
         <div className="window-controls">
@@ -98,11 +97,13 @@ const ProjectCard = ({ project }) => {
         </div>
         <div className="project-link">
           <a
-            href={project.projectLink}
+           href={project.githubLink} 
             target="_blank"
             rel="noopener noreferrer"
           >
-            <b><FaGithub size={23} style={{color:'white'}}/></b>
+            <b>
+              <FaGithub size={23} style={{ color: "white" }} />
+            </b>
           </a>
         </div>
       </div>
@@ -116,17 +117,37 @@ const ProjectCard = ({ project }) => {
 
       {/* Project Details */}
       <h3 className="project-title">{project.title}</h3>
-      <p className="project-description">  {renderDescription(project.description)}</p>
-      <ul style={{ listStyleType: "none", paddingLeft: "10px", display: 'flex', flexWrap: 'wrap', margin: 0 }}>
+      <p className="project-description">
+        {" "}
+        {renderDescription(project.description)}
+      </p>
+      <ul
+        style={{
+          listStyleType: "none",
+          paddingLeft: "10px",
+          display: "flex",
+          flexWrap: "wrap",
+          margin: 0,
+        }}
+      >
         {project.technologies.map((tech, index) => (
-          <li key={index} style={{ fontSize: "0.7rem", border: '1px solid grey', borderRadius: '5px', padding: '3px', marginRight: '0.5rem', marginBottom:'0.5rem', background: 'rgb(240, 240, 240)' }}>
+          <li
+            key={index}
+            style={{
+              fontSize: "0.7rem",
+              border: "1px solid grey",
+              borderRadius: "5px",
+              padding: "3px",
+              marginRight: "0.5rem",
+              marginBottom: "0.5rem",
+              background: "rgb(240, 240, 240)",
+            }}
+          >
             {tech}
           </li>
         ))}
       </ul>
-      
     </div>
-    
   );
 };
 
@@ -159,8 +180,10 @@ const ProjectSlider = () => {
   };
 
   return (
-     <>
-      <h2 className="slider-title" id="projects">Projects</h2>
+    <>
+      <h2 className="slider-title" id="projects">
+        Projects
+      </h2>
 
       <div className="slider-container">
         <Slider {...settings}>
