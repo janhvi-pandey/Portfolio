@@ -121,7 +121,7 @@ export default function VerticalTabs() {
             activeTab === "quick-summary" ? "active-home" : ""
           }`}
         >
-          {/* changed button to div--no changes in functionality */}
+       
           {headings.map((heading) => (
             <div
               key={heading.id}

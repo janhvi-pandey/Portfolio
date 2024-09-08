@@ -7,54 +7,79 @@ import "./project.css"; // Import the CSS file
 import { FaGithub } from "react-icons/fa";
 
 // Sample images (replace with actual imports)
-import projectImage1 from "../images/Portfolio.png";
-import projectImage2 from "../images/YourMeal.png";
-import projectImage3 from "../images/Textutils.png";
-import projectImage4 from "../images/TicTacToe.png";
-import projectImage5 from "../images/Spotify.png";
-import projectImage6 from "../images/snake.png";
+import projectImage1 from "../images/secret.png";
+import projectImage2 from "../images/Portfolio.png";
+import projectImage3 from "../images/karam.png";
+import projectImage4 from "../images/news.png";
+import projectImage5 from "../images/YourMeal.png";
+import projectImage6 from "../images/Textutils.png";
+import projectImage7 from "../images/TicTacToe.png";
+import projectImage8 from "../images/Spotify.png";
+import projectImage9 from "../images/snake.png";
 
 // Array of projects
 const projects = [
   {
-    title: "My Personal Portfolio",
+    title: "Secret Script",
     image: projectImage1,
+    description: "A secure platform for managing sensitive data",
+    technologies: ["MongoDb","ExpressJS","React", "NodeJS","Bootstrap","Vercel"],
+    githubLink: "https://github.com/janhvi-pandey/Secret-Script-Frontend", // Update with actual GitHub URL
+  },
+  {
+    title: "My Personal Portfolio",
+    image: projectImage2,
     description: "Curated showcase of my best work",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js","Firebase"],
     githubLink: "https://github.com/janhvi-pandey/Portfolio", // Update with actual GitHub URL
   },
   {
+    title: "Karam: Customer Query Management",
+    image: projectImage3,
+    description: "Efficient and streamlined customer query management",
+    technologies: [ "React", "NodeJS","MongoDb","ExpressJS","Bootstrap","Vercel"],
+    githubLink: "https://github.com/janhvi-pandey/Karam-Customer-Query-Management-Frontend", // Update with actual GitHub URL
+  },
+
+  {
+    title: "NewsHub",
+    image: projectImage4,
+    description: "Aggregating real-time global news in one place",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "News API","Bootstrap"],
+    githubLink: "https://github.com/janhvi-pandey/NewsHub", // Update with actual GitHub URL
+  },
+  {
     title: "Your Meal",
-    image: projectImage2,
-    description: "Explore a world of culinary delights.",
-    technologies: ["HTML", "CSS", "JavaScript"],
+    image: projectImage5,
+    description: "Explore a world of culinary delights",
+    technologies: ["HTML", "CSS", "JavaScript","Bootstrap"],
     githubLink: "https://github.com/janhvi-pandey/YourMeal", // Update with actual GitHub URL
   },
   {
     title: "TextUtils",
-    image: projectImage3,
-    description: "Transform and refine your text effortlessly.",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
+    image: projectImage6,
+    description: "Transform and refine your text effortlessly",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Bootstrap"],
     githubLink: "https://github.com/janhvi-pandey/TextUtils", // Update with actual GitHub URL
   },
   {
     title: "TicTac Zenith",
-    image: projectImage4,
-    description: "Challenge yourself in a classic game of strategy.",
+    image: projectImage7,
+    description: "Challenge yourself in a classic game of strategy",
     technologies: ["HTML", "CSS", "JavaScript"],
     githubLink: "https://github.com/janhvi-pandey/TIC-TAC-TOE", // Update with actual GitHub URL
   },
   {
     title: "Spotify",
-    image: projectImage5,
-    description: "Discover a world of musical treasures.",
+    image: projectImage8,
+    description: "Discover a world of musical treasures",
     technologies: ["HTML", "CSS", "JavaScript"],
     githubLink: "https://github.com/janhvi-pandey/Spotify", // Update with actual GitHub URL
   },
   {
     title: "Hiss Of Doom",
-    image: projectImage6,
-    description: "Engaging Snake game: eat, grow, and conquer.",
+    image: projectImage9,
+    description: "Engaging Snake game: eat, grow, and conquer",
     technologies: ["HTML", "CSS", "JavaScript"],
     githubLink: "https://github.com/janhvi-pandey/Hiss-of-Doom", // Update with actual GitHub URL
   },

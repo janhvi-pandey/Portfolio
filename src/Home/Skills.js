@@ -42,15 +42,15 @@ const Skills = () => {
   const cardsData = [
     {
       title: "Developer",
-      skills: ["HTML 5", "CSS 3", "JavaScript", "React", "Node.js", "Github"],
+      skills: ["HTML 5", "CSS 3", "React", "NodeJS", "MongoDb","ExpressJs","Docker"],
     },
     {
       title: "Programmer",
-      skills: ["C", "C++", "Java", "Python", "DSA", "SQL"],
+      skills: ["C", "C++", "Java", "Python","JavaScript", "DSA", "SQL"],
     },
     {
-      title: "Designer",
-      skills: ["Canva", "UI/UX", "Figma"],
+      title: "Toolkit",
+      skills: ["Canva", "Git", "GitHub","Firebase","Vercel","Bootstrap","VS Code"],
     },
   ];
 
