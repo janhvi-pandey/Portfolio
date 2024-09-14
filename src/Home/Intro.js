@@ -36,7 +36,7 @@ function Intro() {
           <br />
 
           <a
-            href="/resume.pdf"
+            href="/JanhviPandeyResume..pdf"
             download="Janhvi_Pandey_Resume.pdf"
             className="btn"
             style={{
@@ -87,7 +87,7 @@ function Intro() {
           </h5>
           
           <a
-            href="/resume.pdf"
+            href="/JanhviPandeyResume..pdf"
             download="Janhvi_Pandey.pdf"
             className="btn"
             style={{
