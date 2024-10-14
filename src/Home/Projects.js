@@ -23,43 +23,42 @@ const projects = [
     title: "Secret Script",
     image: projectImage1,
     description: "A secure platform for managing sensitive data",
-    technologies: ["MongoDb","ExpressJS","React", "NodeJS","Bootstrap","Vercel"],
+    technologies: ["MongoDb", "ExpressJS", "React", "NodeJS"],
     githubLink: "https://github.com/janhvi-pandey/Secret-Script-Frontend", // Update with actual GitHub URL
   },
   {
     title: "My Personal Portfolio",
     image: projectImage2,
     description: "Curated showcase of my best work",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js","Firebase"],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Node.js"],
     githubLink: "https://github.com/janhvi-pandey/Portfolio", // Update with actual GitHub URL
   },
   {
     title: "Karam: Customer Query Management",
     image: projectImage3,
-    description: "Efficient and streamlined customer query management",
-    technologies: [ "React", "NodeJS","MongoDb","ExpressJS","Bootstrap","Vercel"],
+    description: "Efficient & streamlined customer query management",
+    technologies: ["React", "NodeJS", "MongoDb", "ExpressJS"],
     githubLink: "https://github.com/janhvi-pandey/Karam-Customer-Query-Management-Frontend", // Update with actual GitHub URL
   },
-
   {
     title: "NewsHub",
     image: projectImage4,
     description: "Aggregating real-time global news in one place",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "News API","Bootstrap"],
+    technologies: ["JavaScript", "React", "News API", "Bootstrap"],
     githubLink: "https://github.com/janhvi-pandey/NewsHub", // Update with actual GitHub URL
   },
   {
     title: "Your Meal",
     image: projectImage5,
     description: "Explore a world of culinary delights",
-    technologies: ["HTML", "CSS", "JavaScript","Bootstrap"],
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     githubLink: "https://github.com/janhvi-pandey/YourMeal", // Update with actual GitHub URL
   },
   {
     title: "TextUtils",
     image: projectImage6,
     description: "Transform and refine your text effortlessly",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "Bootstrap"],
+    technologies: ["HTML", "CSS", "JavaScript", "React"],
     githubLink: "https://github.com/janhvi-pandey/TextUtils", // Update with actual GitHub URL
   },
   {
@@ -85,6 +84,7 @@ const projects = [
   },
   // Add more projects as needed
 ];
+
 const ProjectCard = ({ project }) => {
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
@@ -106,11 +106,20 @@ const ProjectCard = ({ project }) => {
 
   // Helper function to render truncated or full text
   const renderDescription = (text) => {
-    const maxLength = 35;
+    const maxLength = 36;
     return !isLargeScreen && text.length > maxLength
       ? `${text.slice(0, maxLength)}...`
       : text;
   };
+
+  // Helper function to render title truncated for small screens
+  const renderTitle = (title) => {
+    const maxLength = 22;
+    return !isLargeScreen && title.length > maxLength
+      ? `${title.slice(0, maxLength)}...`
+      : title;
+  };
+
   return (
     <div className="project-card">
       {/* Header with window controls and Project link */}
@@ -122,7 +131,7 @@ const ProjectCard = ({ project }) => {
         </div>
         <div className="project-link">
           <a
-           href={project.githubLink} 
+            href={project.githubLink}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -141,9 +150,8 @@ const ProjectCard = ({ project }) => {
       />
 
       {/* Project Details */}
-      <h3 className="project-title">{project.title}</h3>
+      <h3 className="project-title">{renderTitle(project.title)}</h3>
       <p className="project-description">
-        {" "}
         {renderDescription(project.description)}
       </p>
       <ul
@@ -181,7 +189,7 @@ const ProjectSlider = () => {
   // Slider settings
   const settings = {
     infinite: true,
-    speed: 950,
+    speed: 1500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
