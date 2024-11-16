@@ -113,3 +113,26 @@
     margin: 0 20px; /* Base margin between cards on large screens */
   }
 }
+.explore-button-container {
+  text-align: center;
+  margin-top: 40px;
+ 
+}
+
+.explore-button {
+  background-color: #772058;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width:95%;
+  margin-top: 25px;
+  margin-bottom:25px;
+  transition: background-color 0.3s ease;
+}
+
+.explore-button:hover {
+  background-color: #42113c;
+}

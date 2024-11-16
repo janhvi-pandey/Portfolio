@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import { useNavigate } from "react-router-dom"
 import "./project.css"; // Import the CSS file
 
 import { FaGithub } from "react-icons/fa";
@@ -212,6 +213,13 @@ const ProjectSlider = () => {
     ],
   };
 
+  const navigate = useNavigate();
+
+  // Handle "Explore my projects" button click
+  const handleExploreProjects = () => {
+    navigate("/projects");
+  };
+
   return (
     <>
       <h2 className="slider-title" id="projects">
@@ -226,6 +234,16 @@ const ProjectSlider = () => {
             </div>
           ))}
         </Slider>
+      </div>
+
+      {/* Explore my projects button */}
+      <div className="explore-button-container">
+        <button
+          onClick={handleExploreProjects}
+          className="explore-button"
+        >
+          Explore My Projects
+        </button>
       </div>
     </>
   );

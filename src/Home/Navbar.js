@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import './Navbar.css'; // Keeping minimal custom styles here
+import { useLocation, useNavigate } from 'react-router-dom'; // Import hooks from react-router-dom
+import './Navbar.css';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeItem, setActiveItem] = useState('home');
+  const location = useLocation(); // Detect the current route
+  const navigate = useNavigate();  // Navigate programmatically
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -12,7 +15,8 @@ export default function Navbar() {
   // Utility function to scroll with an offset
   const scrollToSection = (sectionId) => {
     const section = document.querySelector(sectionId);
-    const navbarHeight = document.querySelector('.navbar').offsetHeight; // Calculate current navbar height
+    const navbarHeight = document.querySelector('.navbar').offsetHeight;
+
     if (section) {
       window.scrollTo({
         top: section.offsetTop - navbarHeight,
@@ -23,7 +27,14 @@ export default function Navbar() {
 
   const handleNavItemClick = (item, sectionId) => {
     setActiveItem(item);
-    scrollToSection(sectionId);
+
+    if (location.pathname !== '/') {
+      // If not on home page, navigate to home and scroll to section
+      navigate('/', { state: { scrollTo: sectionId } });
+    } else {
+      // If already on home page, scroll to section directly
+      scrollToSection(sectionId);
+    }
   };
 
   return (
@@ -44,7 +55,7 @@ export default function Navbar() {
                 Home
               </a>
             </li>
-            <li className="nav-item" style={{ color: 'rgb(209, 207, 207)' }}>
+            <li className="nav-item">
               <a
                 className={`nav-link ${activeItem === 'about' ? 'active' : ''}`}
                 href="#about"
@@ -65,7 +76,7 @@ export default function Navbar() {
             <li className="nav-item">
               <a
                 className={`nav-link ${activeItem === 'project' ? 'active' : ''}`}
-                href="#project"
+                href="#projects"
                 onClick={(e) => { e.preventDefault(); handleNavItemClick('project', '#projects'); }}
               >
                 Project

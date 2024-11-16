@@ -10,6 +10,7 @@ import SecretScriptmockup from "../images/SecretScript  Mockup.png";
 import { FaEye } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaCaretDown } from "react-icons/fa";
+
 // Project data
 const projects = [
   {
@@ -74,7 +75,7 @@ const projects = [
     preview: newshubmockup,
     techs: ["React", "MongoDB", "Node.js", "Express.js"],
     github: "https://github.com/janhvi-pandey/NewsHub",
-    live: "https://github.com/janhvi-pandey/Secret-Script-Frontend",
+    live: "https://github.com/janhvi-pandey/NewsHub",
     tags: [
       "link vink",
       "mern stack",

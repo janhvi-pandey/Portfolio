@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom"; // Import hooks from react-router-dom
 
 export default function Footer() {
-  // State to track which nav link is hovered
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const location = useLocation(); // Detect the current route
+  const navigate = useNavigate(); // Navigate programmatically
 
   // Event handlers to set and clear hover state
   const handleMouseEnter = (index) => {
@@ -12,28 +14,36 @@ export default function Footer() {
   const handleMouseLeave = () => {
     setHoveredIndex(null);
   };
-   // Function to handle scrolling with offset
-   const handleScroll = (id) => {
-    // Prevent default behavior
-    window.event.preventDefault();
-    
-    const element = document.getElementById(id);
-    const offset = -50; // Adjust this value to your header height or desired offset
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.pageYOffset + offset;
 
-    // Smooth scroll to the position with offset
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
+  // Function to scroll with offset
+  const handleScroll = (sectionId) => {
+    const section = document.querySelector(sectionId);
+    const navbarHeight = document.querySelector('.navbar').offsetHeight; // Get navbar height
+
+    // Check if section exists
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - navbarHeight,
+        behavior: 'smooth',
+      });
+    }
+  };
+
+  const handleNavItemClick = (item, sectionId) => {
+    if (location.pathname !== '/') {
+      // If not on the home page, navigate to home and scroll to section
+      navigate('/', { state: { scrollTo: sectionId } });
+    } else {
+      // If already on home page, scroll to section directly
+      handleScroll(sectionId);
+    }
   };
 
   const styles = {
     footer: {
-      marginTop:'3%',
+      marginTop: '3%',
       width: "100%",
-      backgroundImage: "linear-gradient(to right, #7a3a59, #660066, #330033)", // Updated background gradient with slightly lighter shades
+      backgroundImage: "linear-gradient(to right, #7a3a59, #660066, #330033)",
       color: "#fff",
       padding: "2rem",
       borderTop: "2px solid #333",
@@ -56,22 +66,15 @@ export default function Footer() {
       fontSize: "2rem",
       fontWeight: "bold",
       margin: "0",
-      fontFamily: "'Poppins', sans-serif", // Added custom font style
-      backgroundImage: "linear-gradient(to right, #ff6b6b, #ff8787)", // Gradient color for text
-      WebkitBackgroundClip: "text", // Makes the gradient text visible
-      WebkitTextFillColor: "transparent", // Makes text transparent to show gradient
-      "@media (maxWidth: 768px)": {
-        fontSize: "1.5rem",
-      },
+      fontFamily: "'Poppins', sans-serif",
+      backgroundImage: "linear-gradient(to right, #ff6b6b, #ff8787)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
     },
     tagline: {
       fontFamily: "Trirong, serif",
       fontSize: "1.3rem",
-      marginBottom:'0px',
       margin: "0.5rem 0 0",
-      "@media (maxWidth: 768px)": {
-        fontSize: "1.1rem",
-      },
     },
     nav: {
       display: "flex",
@@ -90,17 +93,17 @@ export default function Footer() {
     loveNote: {
       marginTop: "2rem",
       fontSize: "0.9rem",
-      color: "#ffd700", // Gold color to highlight
+      color: "#ffd700",
     },
     navLink: (index) => ({
       textDecoration: "none",
       fontSize: "1rem",
       fontWeight: "500",
-      transition: "transform 0.3s ease, color 0.3s ease", // Added transform transition
+      transition: "transform 0.3s ease, color 0.3s ease",
       display: "block",
       padding: "0.5rem 0.5rem",
-      transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)", // Scale effect on hover
-      color: hoveredIndex === index ? "#ffd700" : "#fff", // Change color on hover
+      transform: hoveredIndex === index ? "scale(1.05)" : "scale(1)",
+      color: hoveredIndex === index ? "#ffd700" : "#fff",
     }),
     legalContainer: {
       fontSize: "0.9rem",
@@ -117,12 +120,11 @@ export default function Footer() {
       textDecoration: "none",
       transition: "color 0.3s ease",
       "&:hover": {
-        color: "#ffd700", // Hover color for legal links
+        color: "#ffd700",
       },
     },
   };
 
-  
   return (
     <div style={styles.footer}>
       <div style={styles.container}>
@@ -135,19 +137,11 @@ export default function Footer() {
         {/* Navigation Links */}
         <div style={styles.nav}>
           <ul style={styles.navList}>
-            {[
-              "Home",
-              "About",
-              "Skills",
-              "Projects",
-              "Certifications",
-              "Contact",
-            ].map((item, index) => (
+            {["Home", "About", "Skills", "Projects", "Certifications", "Contact"].map((item, index) => (
               <li key={item}>
                 <span
-                  // Use span instead of anchor to handle custom scroll
-                  onClick={() => handleScroll(item.toLowerCase())}
-                  style={styles.navLink(index)} // Apply style with hover state
+                  onClick={() => handleNavItemClick(item.toLowerCase(), `#${item.toLowerCase()}`)} // Adjusted to map the item to the correct section id
+                  style={styles.navLink(index)}
                   onMouseEnter={() => handleMouseEnter(index)}
                   onMouseLeave={handleMouseLeave}
                 >
