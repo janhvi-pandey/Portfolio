@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect, useRef  } from "react";
 import styled from "styled-components";
-
+import { ReactTyped } from 'react-typed';
 import textutilmockup from "../images/TextUtils Mockup.png";
 import newshubmockup from "../images/NewsHub Mockup.png";
 import portfoliomockup from "../images/Portfolio Mockup.png";
@@ -106,23 +106,23 @@ const projects = [
   },
 ];
 
-const Header = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top:6rem;
-  margin-bottom: 2rem;
-`;
-
 const CatchyLine = styled.h1`
   font-size: 2rem;
   font-weight: 500;
-  color: #333;
+  width:95%;
+  // color: #333;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:5rem;
+  margin-bottom:2.5rem;
+  color: #602040;
 `;
 
 const SearchContainer = styled.div`
   position: relative;
-  width: 300px;
+  width: 95%;
+  margin:auto;
+   margin-bottom:2rem;
 `;
 
 const SearchInput = styled.input`
@@ -159,7 +159,7 @@ const DropdownContainer = styled.div`
 `;
 
 const DropdownItem = styled.div`
-  padding: 0.75rem;
+  padding: 0.8rem;
   font-size: 1rem;
   cursor: pointer;
 
@@ -181,6 +181,7 @@ const Project = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding: 1rem;
+  padding-top:2rem;
   margin-bottom: 4rem;
   border-bottom: 2px solid #ddd;
   border-radius: 10px;
@@ -198,7 +199,7 @@ const ProjectImage = styled.img`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 100%;
     margin-bottom: 0.5rem;
   }
 `;
@@ -275,10 +276,40 @@ const LinkIcon = styled.a`
   }
 `;
 
+const NoProjectsMessage = styled.p`
+  font-size: 1.2rem;
+  color: #555;
+  text-align: center;
+  margin-top: 20px;
+`;
+
 function ExploreProject() {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProjects, setFilteredProjects] = useState(projects);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const dropdownRef = useRef(null);
+  const inputRef = useRef(null);
+
+  // Close the dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        inputRef.current &&
+        !inputRef.current.contains(event.target)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   const handleSearchChange = (event) => {
     const query = event.target.value;
@@ -295,55 +326,76 @@ function ExploreProject() {
     }
   };
 
+  const handleProjectSelect = (project) => {
+    setSearchQuery(project.name); // Set the selected project name to the search input
+    setSelectedProject(project); // Update the selected project state
+    setFilteredProjects([project]); // Show only the selected project
+    setIsDropdownOpen(false); // Close the dropdown after selecting a project
+  };
+
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
   };
 
   return (
     <>
-      <Header>
-        <CatchyLine>Explore My Projects</CatchyLine>
+      
+        <CatchyLine>  <ReactTyped
+        strings={['Bringing ideas to life, one project at a time','Explore a curated collection of my projects, where code meets creativity', 'Every project tells a story of learning, growing, and creating.', 'Dive into the projects that fuel my passion for technology.']}
+        typeSpeed={100}
+        backSpeed={50}
+        loop
+        
+      /></CatchyLine>
         <SearchContainer>
           <SearchInput
+            ref={inputRef}
             type="text"
             placeholder="Search project..."
             value={searchQuery}
             onChange={handleSearchChange}
+            onFocus={toggleDropdown} // Open dropdown when focused
           />
           <DropdownToggle onClick={toggleDropdown}>
             <FaCaretDown />
           </DropdownToggle>
           {isDropdownOpen && filteredProjects.length > 0 && (
-            <DropdownContainer>
+            <DropdownContainer ref={dropdownRef}>
               {filteredProjects.map((project) => (
-                <DropdownItem key={project.name}>
+                <DropdownItem
+                  key={project.name}
+                  onClick={() => handleProjectSelect(project)}
+                >
                   {project.name}
                 </DropdownItem>
               ))}
             </DropdownContainer>
           )}
         </SearchContainer>
-      </Header>
+     
 
       <ProjectsContainer>
-        {filteredProjects.map((project) => (
-          <Project key={project.name}>
-            <ProjectImage src={project.preview} alt={`${project.name} preview`} />
+        {selectedProject ? (
+          <Project key={selectedProject.name}>
+            <ProjectImage
+              src={selectedProject.preview}
+              alt={`${selectedProject.name} preview`}
+            />
             <ProjectDetails>
-              <ProjectName>{project.name}</ProjectName>
-              <ProjectDescription>{project.description}</ProjectDescription>
+              <ProjectName>{selectedProject.name}</ProjectName>
+              <ProjectDescription>{selectedProject.description}</ProjectDescription>
 
               <TechList>
-                {project.techs.map((tech, index) => (
+                {selectedProject.techs.map((tech, index) => (
                   <TechName key={index}>{tech}</TechName>
                 ))}
               </TechList>
 
               <ProjectLinks>
-                {project.github && (
+                {selectedProject.github && (
                   <LinkContainer>
                     <LinkIcon
-                      href={project.github}
+                      href={selectedProject.github}
                       target="_blank"
                       aria-label="GitHub Repo"
                     >
@@ -351,10 +403,10 @@ function ExploreProject() {
                     </LinkIcon>
                   </LinkContainer>
                 )}
-                {project.live && (
+                {selectedProject.live && (
                   <LinkContainer>
                     <LinkIcon
-                      href={project.live}
+                      href={selectedProject.live}
                       target="_blank"
                       aria-label="Live Website"
                     >
@@ -365,7 +417,53 @@ function ExploreProject() {
               </ProjectLinks>
             </ProjectDetails>
           </Project>
-        ))}
+        ) : filteredProjects.length === 0 ? (
+          <NoProjectsMessage>No projects found</NoProjectsMessage>
+        ) : (
+          filteredProjects.map((project) => (
+            <Project key={project.name}>
+              <ProjectImage
+                src={project.preview}
+                alt={`${project.name} preview`}
+              />
+              <ProjectDetails>
+                <ProjectName>{project.name}</ProjectName>
+                <ProjectDescription>{project.description}</ProjectDescription>
+
+                <TechList>
+                  {project.techs.map((tech, index) => (
+                    <TechName key={index}>{tech}</TechName>
+                  ))}
+                </TechList>
+
+                <ProjectLinks>
+                  {project.github && (
+                    <LinkContainer>
+                      <LinkIcon
+                        href={project.github}
+                        target="_blank"
+                        aria-label="GitHub Repo"
+                      >
+                        <FaGithub />
+                      </LinkIcon>
+                    </LinkContainer>
+                  )}
+                  {project.live && (
+                    <LinkContainer>
+                      <LinkIcon
+                        href={project.live}
+                        target="_blank"
+                        aria-label="Live Website"
+                      >
+                        <FaEye />
+                      </LinkIcon>
+                    </LinkContainer>
+                  )}
+                </ProjectLinks>
+              </ProjectDetails>
+            </Project>
+          ))
+        )}
       </ProjectsContainer>
     </>
   );
