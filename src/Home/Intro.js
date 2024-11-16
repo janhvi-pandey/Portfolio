@@ -36,8 +36,8 @@ function Intro() {
           <br />
 
           <a
-            href="/JanhviPandeyResume..pdf"
-            download="Janhvi_Pandey_Resume.pdf"
+            href="/Resume.pdf"
+            download="Resume.pdf"
             className="btn"
             style={{
               color: 'white',
@@ -87,7 +87,7 @@ function Intro() {
           </h5>
           
           <a
-            href="/JanhviPandeyResume..pdf"
+            href="/Resume.pdf"
             download="Janhvi_Pandey.pdf"
             className="btn"
             style={{

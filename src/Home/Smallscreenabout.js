@@ -8,11 +8,13 @@ const headings = [
     content: (
       <div style={{ fontSize: "0.85rem", fontWeight: "450" }}>
         <p>
-          A visionary B.Tech student and full-stack developer, I turn innovative
-          concepts into impactful digital solutions. Proficient in HTML, CSS,
-          JavaScript, and React, I craft seamless web applications with a focus
-          on refined design and robust development. My collaborative approach
-          and problem-solving skills ensure high-quality, scalable results.
+          I'm a final-year B.Tech CSE student at BBDITM, specializing in
+          full-stack development with the MERN stack. I have experience in
+          React, UI/UX design, and backend development. As a Competitive
+          Programming Mentor with Google Developer Student Clubs, I lead
+          hackathons and workshops, sharpening my leadership and problem-solving
+          skills. I’m passionate about learning new technologies, creating
+          secure & user-friendly digital interfaces.
         </p>
       </div>
     ),
@@ -24,22 +26,22 @@ const headings = [
       <div>
         <p>
           <strong>
-            &#9733; Full Stack Developer Intern at Softpro Lucknow
+            &#9733; MERN Stack Developer Intern
           </strong>
         </p>
-        <p>&#8594; Softpro Lucknow</p>
-        <p>&#8594; July 2024 - Present</p>
+        <p>&#8594; Softpro India Computer Technologies</p>
+        <p>&#8594; August 2024 - September 2024</p>
 
         <p>
           <strong>&#9733; Competitive Programming Mentor</strong>
         </p>
         <p>&#8594; GDSC BBDITM</p>
-        <p>&#8594; August 2023 - Present</p>
+        <p>&#8594; August 2023 - November 2024</p>
         <p>
           <strong>&#9733; IIC Convener </strong>
         </p>
         <p>&#8594; IIC BBDITM</p>
-        <p>&#8594; January 2023 - Present</p>
+        <p>&#8594; January 2023 - January 2024</p>
       </div>
     ),
   },
@@ -55,7 +57,8 @@ const headings = [
         </p>
         <p>&#8594; Bachelor of Technology</p>
         <p>
-          &#8594; Computer Science Engineering | 2021 - 2025 | Percentage: 92
+          &#8594; Computer Science Engineering | 2021 - 2025 
+          &#8594; Percentage: 92
         </p>
 
         <p>
@@ -119,7 +122,7 @@ const SmallScreenCards = () => {
               className="card h-100 shadow-sm small-screen-card"
               style={{ border: "2px solid black" }}
             >
-              <div className="text-center" style={{width: '100%'}}>
+              <div className="text-center" style={{ width: "100%" }}>
                 <div className="card-header text-center small-screen-card-header">
                   {heading.label}
                 </div>

@@ -9,31 +9,38 @@ import certificationImage1 from "../images/Certificate-1.png";
 import certificationImage2 from "../images/Certificate-2.png";
 import certificationImage3 from "../images/Certificate-3.png";
 import certificationImage4 from "../images/Certificate-4.png";
+import certificationImage5 from "../images/Certificate-5.png";
 
 const certifications = [
+  {
+    title: "Softpro India Computer Technologies",
+    image: certificationImage5,
+    description: "MERN Stack Intern",
+    certificationLink: "https://drive.google.com/file/d/1A-NHFAJqg0cMvm1E9NTdaup_dL5VLuan/view?usp=sharing",
+  },
   {
     title: "Internshala",
     image: certificationImage1,
     description: "Course: Web Development",
-    certificationLink: "https://example.com/certification-one",
+    certificationLink: "https://drive.google.com/file/d/1tTqGS-Jm-LlvXiWA1nV5SpAipwarbeAz/view?usp=sharing",
   },
   {
     title: "Google Developer Student Clubs",
     image: certificationImage2,
     description: "Google Cloud Career Pathway Campaign",
-    certificationLink: "https://example.com/certification-two",
+    certificationLink: "https://drive.google.com/file/d/1oXJSMterGy7eVSJfyuKqN0sJlQvbZdRU/view?usp=sharing",
   },
   {
     title: "Infosys",
     image: certificationImage3,
     description: "Course: Programming Using C++",
-    certificationLink: "https://example.com/certification-three",
+    certificationLink: "https://drive.google.com/file/d/1Hl6wCBKl5S562vufa6n9-1C7FiMZdn_u/view?usp=sharing",
   },
   {
     title: "Infosys",
     image: certificationImage4,
     description: "Course: Fundamentals Of Information Security",
-    certificationLink: "https://example.com/certification-four",
+    certificationLink: "https://drive.google.com/file/d/1H_6p47-beCQEAmhANtSGBS4jlLkRdrxL/view?usp=sharing",
   },
 ];
 
@@ -58,10 +65,14 @@ const CertificationCard = ({ certification }) => {
           <span className="dot yellow"></span>
           <span className="dot green"></span>
         </div>
+
+        {/* Certification Icon wrapped in a link */}
         <div className="certification-icon">
-          <b>
-            <LiaCertificateSolid size={25} style={{ color: "white" }} />
-          </b>
+          <a href={certification.certificationLink} target="_blank" rel="noopener noreferrer">
+            <b>
+              <LiaCertificateSolid size={25} style={{ color: "white" }} />
+            </b>
+          </a>
         </div>
       </div>
 
