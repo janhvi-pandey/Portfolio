@@ -1,6 +1,6 @@
-import React, { useState ,useEffect, useRef  } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import { ReactTyped } from 'react-typed';
+import { ReactTyped } from "react-typed";
 import textutilmockup from "../images/TextUtils Mockup.png";
 import newshubmockup from "../images/NewsHub Mockup.png";
 import portfoliomockup from "../images/Portfolio Mockup.png";
@@ -15,14 +15,16 @@ import { FaCaretDown } from "react-icons/fa";
 const projects = [
   {
     name: "Karam: Customer Query Management",
-    description: "It is a full-stack application that reflects the core values & ideals of Karam, featuring a Customer Query Management system. It includes sections for Home, Services, About, Contact, and Careers. The system allows users to submit and track queries, while admins can manage and update query statuses via seamless REST API integration. This project enhanced my full-stack development skills, particularly in MERN stack, API integration, and optimizing data flow and system performance.",
+    description:
+      "It is a full-stack application that reflects the core values & ideals of Karam, featuring a Customer Query Management system. It includes sections for Home, Services, About, Contact, and Careers. The system allows users to submit and track queries, while admins can manage and update query statuses via seamless REST API integration. This project enhanced my full-stack development skills, particularly in MERN stack, API integration, and optimizing data flow and system performance.",
     preview: karammockup,
     techs: ["React", "MongoDB", "Node.js", "Express.js"],
     github:
       "https://github.com/janhvi-pandey/Karam-Customer-Query-Management-Frontend",
     live: "https://customer-query-management-frontend.vercel.app/",
     tags: [
-      "link vink",
+      "Karam",
+      "Customer Query Management",
       "mern stack",
       "full stack",
       "react",
@@ -37,29 +39,23 @@ const projects = [
     description:
       "My portfolio is a dynamic web application built with ReactJS and Firebase, designed to highlight my skills, projects, and professional experience. This project allowed me to strengthen my front-end development skills while learning to integrate real-time updates, creating an interactive and engaging platform for visitors to explore my work & connect with me.",
     preview: portfoliomockup,
-    techs: ["React", "MongoDB", "Node.js", "Express.js", "Bootstrap"],
+    techs: ["React", "FireBase", "HTML", "CSS", "Bootstrap"],
     github: "https://github.com/janhvi-pandey/Portfolio",
     live: "https://janhvi-portfolio.web.app/",
-    tags: [
-      "portfolio",
-      "hey sainty",
-      "react",
-      "MongoDB",
-      "node js",
-      "express js",
-      "mern",
-      "full stack",
-    ],
+    tags: ["portfolio", "janhvi", "janhvi portfolio", "react"],
   },
   {
     name: "Secret Script",
-    description: "Secret Script is a secure, full-stack application for anonymous script management. The project aimed to combine privacy with a seamless user experience, allowing users to safely store and access their notes. Using modern technologies and secure REST APIs, I enhanced my skills in full-stack development, focusing on data security, API integration, and dynamic content management, all while ensuring an intuitive, responsive interface.",
+    description:
+      "Secret Script is a secure, full-stack application for anonymous script management. The project aimed to combine privacy with a seamless user experience, allowing users to safely store and access their notes. Using modern technologies and secure REST APIs, I enhanced my skills in full-stack development, focusing on data security, API integration, and dynamic content management, all while ensuring an intuitive, responsive interface.",
     preview: SecretScriptmockup,
     techs: ["React", "MongoDB", "Node.js", "Express.js"],
     github: "https://github.com/janhvi-pandey/Secret-Script-Frontend",
     live: "https://secret-script-io.vercel.app/",
     tags: [
-      "link vink",
+      "Secret Script",
+      "Secret",
+      "script",
       "mern stack",
       "full stack",
       "react",
@@ -71,59 +67,43 @@ const projects = [
   },
   {
     name: "NewsHub",
-    description: "NewsHub is a dynamic news platform that aggregates breaking news from multiple sources via NewsAPI. It features a user-friendly interface with global coverage, card-based layout, dark mode, and easy navigation by category and region. This project enhanced my skills in API integration, data fetching, and creating a responsive UI.",
+    description:
+      "NewsHub is a dynamic news platform that aggregates breaking news from multiple sources via NewsAPI. It features a user-friendly interface with global coverage, card-based layout, dark mode, and easy navigation by category and region. This project enhanced my skills in API integration, data fetching, and creating a responsive UI.",
     preview: newshubmockup,
-    techs: ["React", "MongoDB", "Node.js", "Express.js"],
+    techs: ["React", "News API"],
     github: "https://github.com/janhvi-pandey/NewsHub",
     live: "https://github.com/janhvi-pandey/NewsHub",
-    tags: [
-      "link vink",
-      "mern stack",
-      "full stack",
-      "react",
-      "mongo db",
-      "express js",
-      "node js",
-      "vercel",
-    ],
+    tags: ["react", "news", "newsHub"],
   },
   {
     name: "TextUtils",
-    description: "A web based text-editor that allows users to perform various text manipulation tasks such as convert text to uppercase and lowercase, copy text, remove extra spaces, and clear the text field. It also provides a summary of the total word count, character count, and an estimate of the average reading time. Through this project, I gained practical experience with React's core concepts while focusing on building a user-friendly interface and efficient functionality.",
+    description:
+      "A web based text-editor that allows users to perform various text manipulation tasks such as convert text to uppercase and lowercase, copy text, remove extra spaces, and clear the text field. It also provides a summary of the total word count, character count, and an estimate of the average reading time. Through this project, I gained practical experience with React's core concepts while focusing on building a user-friendly interface and efficient functionality.",
     preview: textutilmockup,
-    techs: ["React", "MongoDB", "Node.js", "Express.js"],
+    techs: ["React", "GitHub", "HTML", "CSS", "Bootstrap"],
     github: "https://github.com/janhvi-pandey/TextUtils",
     live: "https://janhvi-pandey.github.io/TextUtils/",
-    tags: [
-      "link vink",
-      "mern stack",
-      "full stack",
-      "react",
-      "mongo db",
-      "express js",
-      "node js",
-      "vercel",
-    ],
+    tags: ["TextUtils", "textutils", "text manipulation", "react"],
   },
 ];
 
 const CatchyLine = styled.h1`
   font-size: 2rem;
   font-weight: 500;
-  width:95%;
+  width: 95%;
   // color: #333;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:5rem;
-  margin-bottom:2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+  margin-bottom: 2.5rem;
   color: #602040;
 `;
 
 const SearchContainer = styled.div`
   position: relative;
   width: 95%;
-  margin:auto;
-   margin-bottom:2rem;
+  margin: auto;
+  margin-bottom: 2rem;
 `;
 
 const SearchInput = styled.input`
@@ -182,7 +162,7 @@ const Project = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding: 1rem;
-  padding-top:2rem;
+  padding-top: 2rem;
   margin-bottom: 4rem;
   border-bottom: 2px solid #ddd;
   border-radius: 10px;
@@ -340,40 +320,45 @@ function ExploreProject() {
 
   return (
     <>
-      
-        <CatchyLine>  <ReactTyped
-        strings={['Bringing ideas to life, one project at a time','Explore a curated collection of my projects, where code meets creativity', 'Every project tells a story of learning, growing, and creating.', 'Dive into the projects that fuel my passion for technology.']}
-        typeSpeed={100}
-        backSpeed={50}
-        loop
-        
-      /></CatchyLine>
-        <SearchContainer>
-          <SearchInput
-            ref={inputRef}
-            type="text"
-            placeholder="Search project..."
-            value={searchQuery}
-            onChange={handleSearchChange}
-            onFocus={toggleDropdown} // Open dropdown when focused
-          />
-          <DropdownToggle onClick={toggleDropdown}>
-            <FaCaretDown />
-          </DropdownToggle>
-          {isDropdownOpen && filteredProjects.length > 0 && (
-            <DropdownContainer ref={dropdownRef}>
-              {filteredProjects.map((project) => (
-                <DropdownItem
-                  key={project.name}
-                  onClick={() => handleProjectSelect(project)}
-                >
-                  {project.name}
-                </DropdownItem>
-              ))}
-            </DropdownContainer>
-          )}
-        </SearchContainer>
-     
+      <CatchyLine>
+        {" "}
+        <ReactTyped
+          strings={[
+            "Bringing ideas to life, one project at a time",
+            "Explore a curated collection of my projects, where code meets creativity",
+            "Every project tells a story of learning, growing, and creating.",
+            "Dive into the projects that fuel my passion for technology.",
+          ]}
+          typeSpeed={100}
+          backSpeed={50}
+          loop
+        />
+      </CatchyLine>
+      <SearchContainer>
+        <SearchInput
+          ref={inputRef}
+          type="text"
+          placeholder="Search project..."
+          value={searchQuery}
+          onChange={handleSearchChange}
+          onFocus={toggleDropdown} // Open dropdown when focused
+        />
+        <DropdownToggle onClick={toggleDropdown}>
+          <FaCaretDown />
+        </DropdownToggle>
+        {isDropdownOpen && filteredProjects.length > 0 && (
+          <DropdownContainer ref={dropdownRef}>
+            {filteredProjects.map((project) => (
+              <DropdownItem
+                key={project.name}
+                onClick={() => handleProjectSelect(project)}
+              >
+                {project.name}
+              </DropdownItem>
+            ))}
+          </DropdownContainer>
+        )}
+      </SearchContainer>
 
       <ProjectsContainer>
         {selectedProject ? (
@@ -384,7 +369,9 @@ function ExploreProject() {
             />
             <ProjectDetails>
               <ProjectName>{selectedProject.name}</ProjectName>
-              <ProjectDescription>{selectedProject.description}</ProjectDescription>
+              <ProjectDescription>
+                {selectedProject.description}
+              </ProjectDescription>
 
               <TechList>
                 {selectedProject.techs.map((tech, index) => (
