@@ -78,20 +78,20 @@ Fork the repository to your own GitHub account.
         
 
 
-### 2. Commit your changes:
+### 3. Commit your changes:
    
     git commit -m "Add YourFeature"
 
 
-### 3. Push to the branch:
+### 4. Push to the branch:
    
     git push origin feature/YourFeature 
   
-### 4. Submit a pull request for review.
+### 5. Submit a pull request for review.
 
 ## ➡️ Seeking Feedback
 
-I am open to suggestions and feedback from the developer community to further enhance my portfolio. If you have ideas or improvements, feel free to reach out!
+I am open to suggestions and feedback from the developer community to further enhance my portfolio. If you have ideas or improvements, feel free to reach out! 😊
  
 ## ➡️ Contact Information
 
