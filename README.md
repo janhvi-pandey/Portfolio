@@ -14,7 +14,7 @@ Project Link: https://janhvi-portfolio.web.app/
 - Skills: A comprehensive list of technical and soft skills.
 - Projects: Key projects with description, GitHub links, and an "Explore My Projects" button for live demos and in-depth details.
 - Certifications: A list of certifications demonstrating my continuous learning and growth.
-- Contact: Easy ways to reach out for potential opportunities and collaborations.
+- Contact: A fully functional contact form for direct communication, plus social media links for collaboration opportunities.
 
 ## ➡️ Technologies Used
 This portfolio is built entirely with React.js, utilizing:
@@ -22,6 +22,7 @@ This portfolio is built entirely with React.js, utilizing:
 - React Router: For smooth navigation across pages.
 - Styled-components: For modular and reusable CSS-in-JS styling.
 - React Bootstrap: For responsive UI components.
+- Formspree: Integrated as a backendless contact form handler.
 - Firebase: For hosting and authentication.
 - Git & GitHub for version control and collaborative development.
 
