@@ -6,6 +6,8 @@ import newshubmockup from "../images/NewsHub Mockup.png";
 import portfoliomockup from "../images/Portfolio Mockup.png";
 import karammockup from "../images/Karam Mockup.png";
 import SecretScriptmockup from "../images/SecretScript  Mockup.png";
+import myportfoliomockup from "../images/Nextjs Mockup.png";
+
 
 import { FaEye } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -33,6 +35,16 @@ const projects = [
       "node js",
       "vercel",
     ],
+  },
+   {
+    name: " My Portfolio",
+    description:
+      "My portfolio is a dynamic web application built with NextJS and TypeScript, designed to highlight my skills, projects, and professional experience. This project allowed me to strengthen my front-end development skills while learning to integrate real-time updates, creating an interactive and engaging platform for visitors to explore my work & connect with me.",
+    preview: myportfoliomockup,
+    techs: ["NextJs","TypeScript","Tailwind CSS", "Shadcn/ui"],
+    github: "https://github.com/janhvi-pandey/My-portfolio",
+    live: "https://janhvi-portfolio.vercel.app/",
+    tags: ["portfolio", "janhvi", "janhvi portfolio", "react"],
   },
   {
     name: "Portfolio",
